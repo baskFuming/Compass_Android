@@ -86,10 +86,12 @@ public class RushFragment extends BaseFragment implements SwipeRefreshLayout.OnR
 //                    return;
 //                }
                 if (isOpenRush) {
-                    mRushWindow = RushWindow.getInstance(getActivity());
-                    mRushWindow.setCallback(this);
-                    mRushWindow.setContent(rushWindowString);
-                    mRushWindow.show();
+//                    mRushWindow = RushWindow.getInstance(getActivity());
+//                    mRushWindow.setCallback(this);
+//                    mRushWindow.setContent(rushWindowString);
+
+//                    mRushWindow.show();
+                    doFlashSale();
                 } else {
                     ToastUtil.showToast(R.string.main_rush_error_1);
                 }

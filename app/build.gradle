@@ -13,9 +13,9 @@ android {
         applicationId "com.xxx.compass"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 6
-//        versionName "1.2.3" //当前版本1.2.3  / 6
-        versionName "1.0.0" //test
+        versionCode 7
+        versionName "2.0.0" //当前版本2.0.0  / 7      / 7.8
+//        versionName "1.0.0" //test
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
