@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000B08"
+    android:orientation="vertical"
+    tools:context="com.xxx.compass.ui.my.activity.FeedBackActivity">
+
+    <include layout="@layout/include_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/shape_back_view"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="产品建议（出现问题）"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_back_edit"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/feed_back_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="0/300"
+                android:textColor="@color/colorText"
+                android:textSize="10dp" />
+
+            <EditText
+                android:id="@+id/feed_back_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/feed_back_number"
+                android:background="@color/colorTransparent"
+                android:gravity="top"
+                android:hint="@string/feed_back_edit_hint"
+                android:lineSpacingExtra="5dp"
+                android:maxLength="300"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorText"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/feed_back_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/shape_back_view"
+        android:gravity="center_vertical"
+        android:hint="请输入您的手机号"
+        android:inputType="phone"
+        android:maxLength="20"
+        android:paddingLeft="20dp"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorText"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/feed_back_btn"
+        android:layout_width="330dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_back_btn_out_login"
+        android:gravity="center"
+        android:text="@string/feed_back_btn"
+        android:textColor="@color/colorText"
+        android:textSize="18dp" />
+
+</LinearLayout>

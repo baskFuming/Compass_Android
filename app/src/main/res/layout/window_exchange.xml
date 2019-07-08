@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_window_back"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <ImageButton
+            android:id="@+id/window_exchange_return"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorTransparent"
+            android:src="@mipmap/window_return" />
+
+        <TextView
+            android:id="@+id/window_exchange_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/window_exchange_title"
+            android:textColor="@color/colorMain"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/window_exchange_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_window_edit"
+        android:hint="@string/window_exchange_edit_hint"
+        android:inputType="numberDecimal"
+        android:maxLength="20"
+        android:paddingLeft="15dp"
+        android:textColor="#333333"
+        android:textColorHint="#333333"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/window_exchange_btn"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_back_btn_small_1l"
+        android:gravity="center"
+        android:text="@string/window_exchange_btn"
+        android:textColor="@color/colorText"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

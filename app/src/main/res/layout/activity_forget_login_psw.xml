@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMainBack"
+    android:orientation="vertical"
+    tools:context="com.xxx.compass.ui.login.ForgetLoginPswActivity">
+
+    <ImageButton
+        android:id="@+id/forget_login_psw_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorTransparent"
+        android:src="@mipmap/main_return" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/forget_login_psw_title"
+        android:textColor="@color/colorMain"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="60dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D3DFEF" />
+
+        <EditText
+            android:id="@+id/forget_login_psw_account_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/forget_login_psw_hint_account"
+            android:inputType="phone"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/forget_login_psw_selector_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8dp"
+            android:drawableRight="@mipmap/county_arrow"
+            android:gravity="center_vertical"
+            android:text="+86"
+            android:textColor="@color/colorMain"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D3DFEF" />
+
+        <EditText
+            android:id="@+id/forget_login_psw_sms_code_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/forget_login_psw_hint_sms_code"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/forget_login_psw_send_sms_code"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_send_sms_code"
+            android:gravity="center"
+            android:text="@string/forget_login_psw_send_sms_code"
+            android:textColor="@color/colorText"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D3DFEF" />
+
+        <EditText
+            android:id="@+id/forget_login_psw_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:digits="@string/password"
+            android:gravity="center_vertical"
+            android:hint="@string/forget_login_psw_hint_password"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <CheckBox
+            android:id="@+id/forget_login_psw_password_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="16dp"
+            android:button="@drawable/selector_password" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D3DFEF" />
+
+        <EditText
+            android:id="@+id/forget_login_psw_password_again_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:digits="@string/password"
+            android:gravity="center_vertical"
+            android:hint="@string/forget_login_psw_hint_password_again"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <CheckBox
+            android:id="@+id/forget_login_psw_password_again_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="16dp"
+            android:button="@drawable/selector_password" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/forget_login_psw_btn"
+        android:layout_width="330dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/shape_back_btn_login"
+        android:gravity="center"
+        android:text="@string/forget_login_psw_btn"
+        android:textColor="@color/colorText"
+        android:textSize="18dp" />
+
+</LinearLayout>

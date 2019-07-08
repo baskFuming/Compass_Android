@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000B08"
+    android:orientation="vertical"
+    tools:context=".ui.my.activity.ModifyPayPswActivity">
+
+    <include layout="@layout/include_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D3DFEF" />
+
+        <EditText
+            android:id="@+id/modify_pay_psw_sms_code_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/modify_pay_psw_hint_sms_code"
+            android:inputType="phone"
+            android:maxLength="6"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/modify_pay_psw_send_sms_code"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_send_sms_code"
+            android:gravity="center"
+            android:text="@string/modify_pay_psw_send_sms_code"
+            android:textColor="@color/colorText"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D3DFEF" />
+
+        <EditText
+            android:id="@+id/modify_pay_psw_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:digits="@string/password"
+            android:gravity="center_vertical"
+            android:hint="@string/modify_pay_psw_hint_password"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <CheckBox
+            android:id="@+id/modify_pay_psw_password_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="16dp"
+            android:button="@drawable/selector_password" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D3DFEF" />
+
+        <EditText
+            android:id="@+id/modify_pay_psw_password_again_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:digits="@string/password"
+            android:gravity="center_vertical"
+            android:hint="@string/modify_pay_psw_hint_password_again"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="@dimen/text_size" />
+
+        <CheckBox
+            android:id="@+id/modify_pay_psw_password_again_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="16dp"
+            android:button="@drawable/selector_password" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/modify_pay_psw_btn"
+        android:layout_width="330dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/shape_back_btn_login"
+        android:gravity="center"
+        android:text="@string/modify_pay_psw_btn"
+        android:textColor="@color/colorText"
+        android:textSize="18dp" />
+
+</LinearLayout>

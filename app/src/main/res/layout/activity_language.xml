@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000B08"
+    android:orientation="vertical"
+    tools:context="com.xxx.compass.ui.my.activity.LanguageActivity">
+
+    <include layout="@layout/include_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/language_simple_zh"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/language_simple_zh"
+            android:textColor="@color/colorText"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/language_simple_zh_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorMain"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/language_en"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/language_en"
+            android:textColor="@color/colorText"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/language_en_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorMain"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

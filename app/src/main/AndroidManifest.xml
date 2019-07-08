@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xxx.compass">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络请求 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 监听网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 监听WIFI状态 -->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 读取文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 写入文件 -->
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 读取相机 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 读取相册 -->
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <!-- 杀死程序权限 -->
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${app_name}"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.main.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.main.SweepActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+        <!-- 服务 -->
+        <service android:name=".service.InitService" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" />
+
+        <!-- 7.0文件访问权限 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.login.ForgetLoginPswActivity" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.login.SelectCountyActivity" />
+        <activity android:name=".ui.home.activity.NodeGameActivity" />
+        <activity android:name=".ui.home.activity.NodeGameRuleActivity" />
+        <activity android:name=".ui.rush.activity.RushRecordActivity" />
+        <activity
+            android:name=".ui.wallet.activity.WithdrawalActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation" />
+        <activity android:name=".ui.wallet.activity.DepositActivity" />
+        <activity android:name=".ui.wallet.activity.DepositInActivity" />
+        <activity android:name=".ui.wallet.activity.DepositOutActivity" />
+        <activity android:name=".ui.wallet.activity.RechargeActivity" />
+        <activity android:name=".ui.my.activity.InviteFriendActivity" />
+        <activity android:name=".ui.my.activity.AccountSettingActivity" />
+        <activity android:name=".ui.my.activity.FeedBackActivity" />
+        <activity android:name=".ui.my.activity.NoticeCenterActivity" />
+        <activity android:name=".ui.my.activity.ProfitRecordActivity" />
+        <activity android:name=".ui.my.activity.DepositProfitActivity" />
+        <activity android:name=".ui.my.activity.ShareRecordActivity" />
+        <activity android:name=".ui.my.activity.AchievementRecordItemActivity" />
+        <activity android:name=".ui.my.activity.PasswordSettingActivity" />
+        <activity android:name=".ui.my.activity.UseHelpActivity" />
+        <activity android:name=".ui.my.activity.ModifyPayPswActivity" />
+        <activity android:name=".ui.my.activity.ModifyLoginPswActivity" />
+        <activity android:name=".ui.my.activity.SettingPayPswActivity" />
+        <activity android:name=".ui.my.activity.ReleaseRecordActivity" />
+        <activity android:name=".ui.my.activity.LanguageActivity" />
+        <activity android:name=".ui.my.activity.AchievementRecordActivity" />
+        <activity android:name=".ui.wallet.activity.DepositRecordActivity" />
+        <activity android:name=".ui.my.activity.CallMeActivity" />
+        <activity android:name=".ui.my.activity.ConversionProfitActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,221 @@
+package com.xxx.compass.ui.my.activity;
+
+import android.annotation.SuppressLint;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.xxx.compass.ConfigClass;
+import com.xxx.compass.R;
+import com.xxx.compass.base.activity.BaseTitleActivity;
+import com.xxx.compass.base.dialog.LoadingDialog;
+import com.xxx.compass.model.http.Api;
+import com.xxx.compass.model.http.ApiCallback;
+import com.xxx.compass.model.http.bean.base.BaseBean;
+import com.xxx.compass.model.utils.DownTimeUtil;
+import com.xxx.compass.model.utils.KeyBoardUtil;
+import com.xxx.compass.model.utils.ToastUtil;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
+
+/**
+ * @Page 修改登录密码页
+ * @Author xxx
+ */
+public class ModifyLoginPswActivity extends BaseTitleActivity {
+
+    @BindView(R.id.modify_login_psw_sms_code_edit)
+    EditText mSMSCodeEdit;
+    @BindView(R.id.modify_login_psw_old_password_edit)
+    EditText mOldPasswordEdit;
+    @BindView(R.id.modify_login_psw_new_password_edit)
+    EditText mNewPasswordEdit;
+    @BindView(R.id.modify_login_psw_new_password_again_edit)
+    EditText mNewPasswordAgainEdit;
+
+    @BindView(R.id.modify_login_psw_send_sms_code)
+    TextView mSendSMSCode;
+
+    @BindView(R.id.modify_login_psw_old_password_eye)
+    CheckBox mOldPasswordEye;
+    @BindView(R.id.modify_login_psw_new_password_eye)
+    CheckBox mNewPasswordEye;
+    @BindView(R.id.modify_login_psw_new_password_again_eye)
+    CheckBox mNewPasswordAgainEye;
+
+    private LoadingDialog mLoadingDialog;
+
+    @Override
+    protected String initTitle() {
+        return getString(R.string.modify_login_psw_title);
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_modify_login_psw;
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @OnClick({R.id.modify_login_psw_send_sms_code, R.id.modify_login_psw_btn, R.id.modify_login_psw_old_password_eye, R.id.modify_login_psw_new_password_eye, R.id.modify_login_psw_new_password_again_eye})
+    public void OnClick(View view) {
+        KeyBoardUtil.closeKeyBord(this, mSMSCodeEdit);
+        switch (view.getId()) {
+            case R.id.modify_login_psw_old_password_eye:
+                KeyBoardUtil.setInputTypePassword(mOldPasswordEye.isChecked(), mOldPasswordEdit);
+                break;
+            case R.id.modify_login_psw_new_password_eye:
+                KeyBoardUtil.setInputTypePassword(mNewPasswordEye.isChecked(), mNewPasswordEdit);
+                break;
+            case R.id.modify_login_psw_new_password_again_eye:
+                KeyBoardUtil.setInputTypePassword(mNewPasswordAgainEye.isChecked(), mNewPasswordAgainEdit);
+                break;
+            case R.id.modify_login_psw_send_sms_code:
+                sendSMSCode();
+                break;
+            case R.id.modify_login_psw_btn:
+                updatePsw();
+                break;
+        }
+    }
+
+    @Override
+    public void finish() {
+        KeyBoardUtil.closeKeyBord(this, mSMSCodeEdit);
+        super.finish();
+    }
+
+    /**
+     * @Model 发送修改密码短信验证码
+     */
+    private void sendSMSCode() {
+        Api.getInstance().sendModifyLoginSMSCode()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ApiCallback<Object>(this) {
+
+                    @Override
+                    public void onSuccess(BaseBean<Object> bean) {
+                        ToastUtil.showToast(bean.getMessage());
+                        DownTimeUtil.getInstance().openDownTime(ConfigClass.SMS_CODE_DOWN_TIME, new DownTimeUtil.Callback() {
+                            @SuppressLint("SetTextI18n")
+                            @Override
+                            public void run(int nowTime) {
+                                mSendSMSCode.setText(nowTime + "s");
+                            }
+
+                            @Override
+                            public void end() {
+                                mSendSMSCode.setText(getString(R.string.modify_login_psw_send_sms_code));
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onError(int errorCode, String errorMessage) {
+                        ToastUtil.showToast(errorMessage);
+                    }
+
+                    @Override
+                    public void onStart(Disposable d) {
+                        super.onStart(d);
+                        if (mLoadingDialog == null) {
+                            mLoadingDialog = LoadingDialog.getInstance(ModifyLoginPswActivity.this);
+                            mLoadingDialog.show();
+                        }
+                    }
+
+                    @Override
+                    public void onEnd() {
+                        super.onEnd();
+                        if (mLoadingDialog != null) {
+                            mLoadingDialog.dismiss();
+                            mLoadingDialog = null;
+                        }
+                    }
+                });
+    }
+
+
+    /**
+     * @Model 修改登录密码
+     */
+    private void updatePsw() {
+        String smsCode = mSMSCodeEdit.getText().toString();
+        String oldPassword = mOldPasswordEdit.getText().toString();
+        String newPassword = mNewPasswordEdit.getText().toString();
+        String newPasswordAgain = mNewPasswordAgainEdit.getText().toString();
+
+        if (smsCode.isEmpty()) {
+            ToastUtil.showToast(R.string.modify_login_psw_error_1);
+            return;
+        }
+        if (oldPassword.isEmpty()) {
+            ToastUtil.showToast(R.string.modify_login_psw_error_2);
+            return;
+        }
+        if (newPassword.isEmpty()) {
+            ToastUtil.showToast(R.string.modify_login_psw_error_3);
+            return;
+        }
+        if (!newPassword.equals(newPasswordAgain)) {
+            ToastUtil.showToast(R.string.modify_login_psw_error_4);
+            return;
+        }
+        if (!smsCode.matches(ConfigClass.MATCHES_SMS_CODE)) {
+            ToastUtil.showToast(R.string.modify_login_psw_error_5);
+            return;
+        }
+        if (!oldPassword.matches(ConfigClass.MATCHES_PASSWORD)) {
+            ToastUtil.showToast(R.string.modify_login_psw_error_6);
+            return;
+        }
+        if (!newPassword.matches(ConfigClass.MATCHES_PASSWORD)) {
+            ToastUtil.showToast(R.string.modify_login_psw_error_7);
+            return;
+        }
+
+        Api.getInstance().modifyLoginPsw(smsCode, oldPassword, newPassword)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ApiCallback<Object>(this) {
+
+                    @Override
+                    public void onSuccess(BaseBean<Object> bean) {
+                        ToastUtil.showToast(bean.getMessage());
+                        finish();
+                    }
+
+                    @Override
+                    public void onError(int errorCode, String errorMessage) {
+                        ToastUtil.showToast(errorMessage);
+                    }
+
+                    @Override
+                    public void onStart(Disposable d) {
+                        super.onStart(d);
+                        if (mLoadingDialog == null) {
+                            mLoadingDialog = LoadingDialog.getInstance(ModifyLoginPswActivity.this);
+                            mLoadingDialog.show();
+                        }
+                    }
+
+                    @Override
+                    public void onEnd() {
+                        super.onEnd();
+                        if (mLoadingDialog != null) {
+                            mLoadingDialog.dismiss();
+                            mLoadingDialog = null;
+                        }
+                    }
+                });
+    }
+}

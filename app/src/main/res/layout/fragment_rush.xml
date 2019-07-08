@@ -1,0 +1,221 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000B08"
+    android:orientation="vertical"
+    tools:context="com.xxx.compass.ui.rush.RushFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="@color/colorMainBack"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="@string/main_rush_title"
+            android:textColor="@color/colorText"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/main_rush_record"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/main_rush_record"
+            android:textColor="@color/colorText"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/main_rush_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_rush_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/main_rush_open_down"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/main_rush_time_h"
+                        android:layout_width="45dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_back_view"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/colorText"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text=":"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/main_rush_time_m"
+                        android:layout_width="45dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_back_view"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/colorText"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text=":"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:id="@+id/main_rush_time_s"
+                        android:layout_width="45dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_back_view"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="@color/colorText"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="13dp"
+                        android:text="@string/main_rush_time_s"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/text_size"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/main_rush_button"
+                    android:layout_width="188dp"
+                    android:layout_height="188dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:src="@mipmap/rush_open" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/shape_back_view"
+                    android:orientation="vertical"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp">
+
+                    <TextView
+                        android:id="@+id/main_rush_total_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="17dp"
+                        android:text="@string/main_rush_total_amount"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/text_size" />
+
+                    <ProgressBar
+                        android:id="@+id/main_rush_progress"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="15dp"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/progress_rush" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/main_rush_now_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_rush_now_amount"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/main_rush_now_amount_rule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/text_size" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/main_rush_rate_text"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:lineSpacingExtra="10dp"
+                    android:text="@string/main_rush_rule"
+                    android:textColor="@color/colorText"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

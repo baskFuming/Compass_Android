@@ -1,0 +1,377 @@
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="app_name_test">Compass(内测)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="address">QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxccvbnm1234567890</string>
+    <string name="password">QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxccvbnm1234567890</string>
+    <string name="loading_text">加载中…</string>
+
+    <!-- 网络请求错误信息配置 -->
+    <string name="error_http_net_work_exception">无网络连接</string>
+    <string name="error_http_url_exception">服务器地址有误</string>
+    <string name="error_http_time_out_exception">网络状态不好，请重试</string>
+    <string name="error_http_json_exception">解析异常</string>
+    <string name="error_http_service_exception">服务器异常</string>
+    <string name="error_http_not_content">这个上下文没有继承BaseActivity</string>
+    <string name="error_http_not">未知错误</string>
+    <string name="check_version_not">当前已是最新版本</string>
+    <string name="exit_exception">很抱歉，程序异常，即将退出</string>
+    <string name="second_exit_app">再次点击退出程序</string>
+    <string name="copy_success">复制成功</string>
+    <string name="not_data">暂无记录</string>
+    <string name="save_image_success">保存到相册成功</string>
+    <string name="save_image_fail">保存失败</string>
+
+    <string name="main_home">首页</string>
+    <string name="main_wallet">钱包</string>
+    <string name="main_rush">抢购</string>
+    <string name="main_app">应用</string>
+    <string name="main_my">我的</string>
+
+    <string name="main_app_title">应用</string>
+    <string name="main_app_content">敬请期待</string>
+    <string name="main_app_media">媒体</string>
+    <string name="main_app_game">游戏</string>
+    <string name="main_app_app">应用</string>
+    <string name="main_app_zbg">ZBG</string>
+    <string name="main_app_coin_all">Coin all</string>
+    <string name="main_app_huo_ju">火炬</string>
+    <string name="main_app_my_token">My token</string>
+    <string name="main_app_talk_btc">BitcoinTalk</string>
+    <string name="main_app_news_btc">比特新闻</string>
+    <string name="main_app_eight_btc">巴比特</string>
+    <string name="main_app_eth_browser">ETH浏览器</string>
+    <string name="main_app_btc_browser">BTC浏览器</string>
+    <string name="main_app_to_loan">借贷</string>
+    <string name="main_app_mall">Mall</string>
+    <string name="main_app_not">即将上线</string>
+    <string name="main_app_not_1">敬请期待</string>
+    <string name="main_my_title">我的</string>
+    <string name="main_my_record">收益记录</string>
+    <string name="main_my_notice">公告中心</string>
+    <string name="main_my_feedback">问题反馈</string>
+    <string name="main_my_setting">账户设置</string>
+    <string name="main_my_invited_text">我的邀请码</string>
+    <string name="main_my_invited">邀请好友</string>
+    <string name="main_my_name">请登录</string>
+    <string name="main_my_invited_icon_text">邀 请 好 友</string>
+    <string name="main_my_invited_icon_toast">邀请得CT奖励</string>
+    <string name="main_home_name">名称</string>
+    <string name="main_home_now_price">最新价</string>
+    <string name="main_home_range">涨跌幅</string>
+    <string name="main_home_node_game">节点竞赛</string>
+    <string name="main_wallet_title">钱包</string>
+    <string name="main_wallet_total_asset">总资产</string>
+    <string name="main_wallet_available_asset">可用资产</string>
+    <string name="main_rush_title">抢购</string>
+    <string name="main_rush_record">抢购记录</string>
+    <string name="main_rush_time_h">时</string>
+    <string name="main_rush_time_m">分</string>
+    <string name="main_rush_time_s">秒</string>
+    <string name="main_rush_total_amount">当前限量</string>
+    <string name="main_rush_now_amount">已抢</string>
+    <string name="main_rush_rule">&#160;\n
+        1.抢购CT需要钱包中拥有10倍可用的CT保证金。\n
+        2.抢购时间为每日一次，具体时间以倒计时为准。\n
+        3.抢购会冻结抢购的份额以及保证金12小时，以免出\n
+        现刷单损害其他用户的情况发生。
+    </string>
+    <string name="main_rush_finish">结束</string>
+    <string name="main_rush_open">抢</string>
+    <string name="main_rush_open_down">开抢倒计时</string>
+    <string name="main_rush_close_down">抢购倒计时</string>
+    <string name="main_rush_rate_text">抢购规则</string>
+    <string name="main_rush_success">本次成功抢到</string>
+    <string name="main_rush_error_1">请在开抢之后抢购</string>
+
+    <string name="feedback_title">问题反馈</string>
+
+    <string name="notice_center_title">公告详情</string>
+
+    <string name="activity_release_title">释放记录</string>
+
+    <string name="usd_help_title">使用帮助</string>
+
+    <string name="rush_record_title">抢购记录</string>
+
+    <string name="account_setting_title">账户设置</string>
+    <string name="account_setting_out_login">退出登录</string>
+    <string name="account_setting_set_password">密码设置</string>
+    <string name="account_setting_use_help">使用帮助</string>
+    <string name="account_setting_switch_language">语言</string>
+    <string name="account_setting_language_simple_zh">简体中文</string>
+    <string name="account_setting_language_en">英文</string>
+    <string name="account_setting_check_version">检查更新</string>
+
+    <string name="language_title">语言</string>
+    <string name="language_simple_zh">简体中文</string>
+    <string name="language_en">English</string>
+
+    <string name="password_setting_title">密码设置</string>
+    <string name="password_setting_modify_login">修改登录密码</string>
+    <string name="password_setting_modify_pay">修改资金密码</string>
+    <string name="password_setting_modify_pay_psw">修改支付密码</string>
+    <string name="password_setting_setting_pay_psw">设置支付密码</string>
+
+    <string name="profit_record_title">收益记录</string>
+    <string name="profit_record_release">释放记录</string>
+    <string name="profit_record_rush">抢购记录</string>
+    <string name="profit_record_achievement">分享业绩</string>
+    <string name="profit_record_share">分享收益</string>
+    <string name="profit_record_coin">理财收益</string>
+
+    <string name="achievement_record_title">分享业绩</string>
+    <string name="achievement_record_total">总业绩（$）</string>
+    <string name="achievement_record_rank">业绩（$）</string>
+    <string name="achievement_record_total_text">总人数</string>
+    <string name="achievement_record_number">代数</string>
+
+    <string name="deposit_profit_title">理财收益</string>
+    <string name="deposit_profit_asset">总理财额($)</string>
+    <string name="deposit_profit_profit">总收益(CT)</string>
+
+    <string name="deposit_title">理财</string>
+    <string name="deposit_in">转入</string>
+    <string name="deposit_out">转出</string>
+    <string name="deposit_list_title">收益记录</string>
+
+    <string name="deposit_in_title">转入</string>
+    <string name="deposit_in_record">转入记录</string>
+    <string name="deposit_in_all">全部</string>
+    <string name="deposit_in_edit">可转入</string>
+    <string name="deposit_in_btn">确认转入</string>
+    <string name="deposit_in_toast_1">理财规则</string>
+    <string name="deposit_in_toast_2">&#160;\n
+        1.随存随取，转入当天不计息，第二天计算收益，第三天收益到账。\n
+        2.转入最低等值$100的等值数字货币。\n
+        3.利息会以CT的方式每天返还到钱包账户，并采用币本位的计息方式。
+    </string>
+    <string name="deposit_in_error_1">数量不能为空</string>
+    <string name="deposit_in_error_2">数量输入有误</string>
+    <string name="deposit_total_asset">理财额</string>
+    <string name="deposit_total_profit">收益(CT)</string>
+
+    <string name="deposit_out_title">转出</string>
+    <string name="deposit_out_record">转出记录</string>
+    <string name="deposit_out_all">全部</string>
+    <string name="deposit_out_edit">可转出</string>
+    <string name="deposit_out_btn">确认转出</string>
+    <string name="deposit_out_error_1">数量不能为空</string>
+    <string name="deposit_out_error_2">数量输入有误</string>
+    <string name="deposit_out_error_3">余额不足</string>
+    <string name="deposit_out_error_4">请先设置资金密码</string>
+    <string name="deposit_out_error_5">密码不能为空</string>
+
+    <string name="deposit_record_in_title">转入记录</string>
+    <string name="deposit_record_out_title">转出记录</string>
+
+    <string name="item_wallet_withdrawal">提现</string>
+    <string name="item_wallet_recharge">充值</string>
+    <string name="item_wallet_exchange">兑换</string>
+    <string name="item_wallet_deposit">理财</string>
+    <string name="item_wallet_available">可用：</string>
+    <string name="item_wallet_frozen">冻结：</string>
+
+    <string name="invite_friend_title">邀请详情</string>
+    <string name="invite_friend_my">我的邀请链接</string>
+    <string name="invite_friend_copy">复制链接</string>
+
+    <string name="note_game_title">节点竞赛</string>
+    <string name="note_game_number">当周奖金池</string>
+    <string name="note_game_first_name">上周冠军：</string>
+    <string name="note_game_first_number">冠军奖金：</string>
+    <string name="note_game_my_number">我的排名：</string>
+    <string name="note_game_rule">奖励规则</string>
+    <string name="note_game_top">当周前十排行榜</string>
+    <string name="note_game_ct">业绩（$）</string>
+    <string name="note_game_my_not">未上榜</string>
+
+    <string name="node_game_rule_title">奖励规则</string>
+    <string name="node_game_rule_open">展开</string>
+    <string name="node_game_rule_close">收起</string>
+    <string name="node_game_rule_open_text">查看详细规则</string>
+    <string name="node_game_rule_level">奖励等级</string>
+    <string name="node_game_rule_rate">奖励比例</string>
+    <string name="node_game_rule_rank">名次</string>
+    <string name="node_game_rule_level_text">等奖</string>
+    <string name="node_game_rule_content1">
+        根据每周直推新增业绩的排名进行派
+        \n(第1名-第511名)
+    </string>
+    <string name="node_game_rule_content2">&#160;\n
+        第1名将独得一等奖为奖池总量的10%CT\n
+        第2–3名将均分二等奖为奖池总量的10%CT\n
+        第4–7名将均分三等奖为奖池总量的10%CT\n
+        第8–15名将均分四等奖为奖池总量的10%CT\n
+        第16–31名将均分五等奖为奖池总量的12%CT\n
+        第32–61名将均分六等奖为奖池总量的12%CT\n
+        第62–127名将均分七等奖为奖池总量的12%CT\n
+        第128–255名将均分八等奖为奖池总量的12%CT\n
+        第256–511名将均分九等奖为奖池总量的12%CT\n
+        每周一0:00开始每周日24:00结算奖金池CT总量
+    </string>
+
+    <string name="recharge_title">充值</string>
+    <string name="recharge_toast_1">扫描二维码向我付款</string>
+    <string name="recharge_list">充值记录</string>
+    <string name="recharge_code">0x</string>
+    <string name="recharge_btn">复制收款地址</string>
+
+    <string name="share_record_title">分享收益</string>
+    <string name="share_record_total">总收益（CT）</string>
+
+    <string name="feed_back_edit_hint">感谢您对产品提出的宝贵问题，我们会尽快优化产品，提升用户体验</string>
+    <string name="feed_back_btn">提交</string>
+    <string name="feed_back_error_1">提交内容不能为空</string>
+    <string name="feed_back_error_2">手机号不能为空</string>
+
+    <string name="withdrawal_title">提现</string>
+    <string name="withdrawal_toast_1">转账前请务必确认地址是否正确，如果输入错误后果自负</string>
+    <string name="withdrawal_btn">确定</string>
+    <string name="withdrawal_fee">转账手续费：</string>
+    <string name="withdrawal_balance">可用余额：</string>
+    <string name="withdrawal_record_list">提现记录</string>
+    <string name="withdrawal_amount_hint">请输入提现数量</string>
+    <string name="withdrawal_address_hint">请输入地址</string>
+    <string name="withdrawal_error_1">地址不能为空</string>
+    <string name="withdrawal_error_2">数量不能为空</string>
+    <string name="withdrawal_error_3">余额不足</string>
+    <string name="withdrawal_error_4">数量输入有误</string>
+    <string name="withdrawal_error_5">密码不能为空</string>
+    <string name="withdrawal_error_6">请先设置资金密码</string>
+
+    <string name="login_title">欢迎来到Compass</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_register">新用户注册</string>
+    <string name="login_hint_account">请输入手机号</string>
+    <string name="login_hint_password">请输入您的密码</string>
+    <string name="login_btn">登录</string>
+    <string name="login_error_1">手机号不能为空</string>
+    <string name="login_error_2">密码不能为空</string>
+    <string name="login_error_4">密码错误请重新输入</string>
+
+    <string name="register_title">绑定手机号</string>
+    <string name="register_send_sms_code">获取验证码</string>
+    <string name="register_hint_account">请输入手机号</string>
+    <string name="register_hint_sms_code">请输入验证码</string>
+    <string name="register_hint_password">请输入8–20位数字与字母结合的密码</string>
+    <string name="register_hint_invite">请输入邀请码</string>
+    <string name="register_btn">注册</string>
+    <string name="register_error_1">手机号不能为空</string>
+    <string name="register_error_2">验证码不能为空</string>
+    <string name="register_error_3">密码不能为空</string>
+    <string name="register_error_5">验证码输入有误</string>
+    <string name="register_error_6">密码输入有误</string>
+    <string name="register_error_7">邀请码不能为空</string>
+
+    <string name="forget_login_psw_title">忘记密码</string>
+    <string name="forget_login_psw_send_sms_code">获取验证码</string>
+    <string name="forget_login_psw_hint_account">请输入您的手机号</string>
+    <string name="forget_login_psw_hint_sms_code">请输入验证码</string>
+    <string name="forget_login_psw_hint_password">请输入密码</string>
+    <string name="forget_login_psw_hint_password_again">请再次输入密码</string>
+    <string name="forget_login_psw_btn">提交</string>
+    <string name="forget_login_psw_error_1">手机号不能为空</string>
+    <string name="forget_login_psw_error_2">验证码不能为空</string>
+    <string name="forget_login_psw_error_3">密码不能为空</string>
+    <string name="forget_login_psw_error_5">验证码输入有误</string>
+    <string name="forget_login_psw_error_6">密码输入有误</string>
+    <string name="forget_login_psw_error_7">您输入的密码两次不一致</string>
+
+    <string name="modify_login_psw_title">修改登录密码</string>
+    <string name="modify_login_psw_send_sms_code">获取验证码</string>
+    <string name="modify_login_psw_hint_sms_code">请输入验证码</string>
+    <string name="modify_login_psw_hint_old_password">请输入旧密码</string>
+    <string name="modify_login_psw_hint_new_password">请输入新密码</string>
+    <string name="modify_login_psw_hint_new_password_again">请再次输入密码</string>
+    <string name="modify_login_psw_btn">确定</string>
+    <string name="modify_login_psw_error_1">验证码不能为空</string>
+    <string name="modify_login_psw_error_2">旧密码不能为空</string>
+    <string name="modify_login_psw_error_3">新密码不能为空</string>
+    <string name="modify_login_psw_error_4">您输入的密码两次不一致</string>
+    <string name="modify_login_psw_error_5">验证码输入有误</string>
+    <string name="modify_login_psw_error_6">旧密码输入有误</string>
+    <string name="modify_login_psw_error_7">新密码输入有误</string>
+
+    <string name="modify_pay_psw_title">修改支付密码</string>
+    <string name="modify_pay_psw_send_sms_code">获取验证码</string>
+    <string name="modify_pay_psw_hint_sms_code">请输入验证码</string>
+    <string name="modify_pay_psw_hint_password">请输入新密码</string>
+    <string name="modify_pay_psw_hint_password_again">请再次输入密码</string>
+    <string name="modify_pay_psw_btn">确定</string>
+    <string name="modify_pay_psw_error_1">验证码不能为空</string>
+    <string name="modify_pay_psw_error_2">密码不能为空</string>
+    <string name="modify_pay_psw_error_3">您输入的密码两次不一致</string>
+    <string name="modify_pay_psw_error_4">验证码输入有误</string>
+    <string name="modify_pay_psw_error_5">密码输入有误</string>
+
+    <string name="setting_pay_psw_title">设置支付密码</string>
+    <string name="setting_pay_psw_hint_password">请输入密码</string>
+    <string name="setting_pay_psw_hint_password_again">请再次输入密码</string>
+    <string name="setting_pay_psw_btn">确定</string>
+    <string name="setting_pay_psw_error_1">密码不能为空</string>
+    <string name="setting_pay_psw_error_2">您输入的密码两次不一致</string>
+    <string name="setting_pay_psw_error_3">密码输入有误</string>
+
+    <string name="select_county_save">保存</string>
+    <string name="select_county_title">国家和地区</string>
+
+    <string name="generation">代</string>
+
+    <string name="zero">零</string>
+    <string name="first">一</string>
+    <string name="second">二</string>
+    <string name="three">三</string>
+    <string name="four">四</string>
+    <string name="five">五</string>
+    <string name="six">六</string>
+    <string name="seven">七</string>
+    <string name="eight">八</string>
+    <string name="nine">九</string>
+
+    <string name="update_title">发现新版本</string>
+    <string name="update_btn">前往下载</string>
+
+    <string name="item_achievement_record_amount_1">普通节点</string>
+    <string name="item_achievement_record_amount_2">钻节点</string>
+
+    <string name="release_total_balance">剩余待释放</string>
+    <string name="release_total_out">总已释放</string>
+    <string name="release_today_balance">今日待抢</string>
+    <string name="release_today_asset">今日已抢</string>
+    <string name="release_total_asset">总已抢购</string>
+
+    <string name="window_exchange_title">兑换</string>
+    <string name="window_exchange_btn">确定</string>
+    <string name="window_exchange_edit_hint">可用：</string>
+    <string name="window_exchange_error_1">数量不能为空</string>
+    <string name="window_exchange_error_2">数量输入有误</string>
+    <string name="window_exchange_error_3">余额不足</string>
+
+    <string name="window_password_edit_hint">请输入支付密码</string>
+    <string name="window_password_btn">确定</string>
+    <string name="window_password_edit_title">输入支付密码</string>
+    <string name="window_password_error_1">密码不能为空</string>
+
+    <string name="window_rush_title">抢购</string>
+    <string name="window_rush_content">
+        您本次有%1$.4f个待抢CT，需要%2$.4f个CT作为保证金。\n
+        您当前的保证金为0，无法参与抢购
+    </string>
+    <string name="window_rush_content1">
+        您本次有%1$.4f个待抢CT，需要%2$.4f个CT作为保证金。\n
+        您当前的保证金为%3$.4f个CT，本次只能抢%4$.4f个CT。
+    </string>
+    <string name="window_rush_btn">确定</string>
+
+    <string name="call_my_title">联系我们</string>
+    <string name="call_my_save">保存二维码</string>
+    <string name="call_my_we_chat">微信</string>
+    <string name="call_my_facebook">Facebook</string>
+    <string name="main_call_my">联系我们</string>
+    <string name="conversion_profit_title">转化收益</string>
+    <string name="profit_record_conversion">转化收益</string>
+
+</resources>

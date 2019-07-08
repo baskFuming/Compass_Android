@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'org.greenrobot.greendao'
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.xxx.compass"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 6
+//        versionName "1.2.3" //当前版本1.2.3  / 6
+        versionName "1.0.0" //test
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        config {
+            storeFile file('F:/project/compass_android/compass.jks')
+            storePassword '123456'
+            keyAlias 'android'
+            keyPassword '123456'
+        }
+        testConfig {
+            storeFile file('F:/project/compass_android/compass_test.jks')
+            storePassword '123456'
+            keyAlias 'android_test'
+            keyPassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            manifestPlaceholders = [
+                    app_name: "@string/app_name"
+            ]
+            buildConfigField "boolean", "LOG_DEBUG", "false"    // 不显示Log
+            minifyEnabled true // 混淆
+            zipAlignEnabled true // Zipalign优化
+            shrinkResources true  // 移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            applicationIdSuffix ".test"         // 测试包增加包名后缀
+
+            manifestPlaceholders = [
+                    app_name: "@string/app_name_test"
+            ]
+            buildConfigField "boolean", "LOG_DEBUG", "true"   // 显示Log
+            minifyEnabled false // 不混淆
+            signingConfig signingConfigs.testConfig
+        }
+    }
+//    greendao {
+//        schemaVersion 1
+//        daoPackage 'com.fckj.qbit.model.db.greendao'
+//        targetGenDir 'src/main/java'
+//    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //TabLayout
+    implementation 'com.android.support:design:28.0.0'
+    //Recycler
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //Recycler适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    //Glide加载图片框架
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    //Butter knife查找ID
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //数据库
+//    implementation 'org.greenrobot:greendao:3.2.2'
+    //沉浸式
+    implementation 'com.gyf.barlibrary:barlibrary:2.2.9'
+    //屏幕适配
+    implementation 'me.jessyan:autosize:1.1.0'
+    //EventBus事件传递
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //网络请求retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2+'
+    implementation 'com.squareup.retrofit2:retrofit:2+'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1+'
+    //Rxjava
+    implementation 'io.reactivex.rxjava2:rxjava:2.+'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.+'
+    //轮播图
+    implementation 'com.youth.banner:banner:1.4.9'
+//    implementation project(':zxing')
+
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
+}

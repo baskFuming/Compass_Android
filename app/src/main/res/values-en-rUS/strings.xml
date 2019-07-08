@@ -1,0 +1,375 @@
+<resources>
+    <string name="app_name">Compass</string>
+    <string name="app_name_test">Compass(Private)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="address">QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxccvbnm1234567890</string>
+    <string name="password">QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxccvbnm1234567890</string>
+    <string name="loading_text">Loading…</string>
+
+    <!-- 网络请求错误信息配置 -->
+    <string name="error_http_net_work_exception">No network connection</string>
+    <string name="error_http_url_exception">Error in server address</string>
+    <string name="error_http_time_out_exception">The network is not in good condition. Please try again.</string>
+    <string name="error_http_json_exception">Analytical anomaly</string>
+    <string name="error_http_service_exception">Server exception</string>
+    <string name="error_http_not_content">This context does not inherit BaseActivity</string>
+    <string name="error_http_not">unknown error</string>
+    <string name="check_version_not">It\'s the latest version.</string>
+    <string name="exit_exception">I\'m sorry, the program is abnormal. I\'m about to quit.</string>
+    <string name="second_exit_app">Click Exit Procedure Again</string>
+    <string name="copy_success">Success copy</string>
+    <string name="not_data">No record</string>
+    <string name="save_image_success">Save to Album Successfully</string>
+    <string name="save_image_fail">Save to Album Fail</string>
+
+    <string name="main_home">Home</string>
+    <string name="main_wallet">Wallet</string>
+    <string name="main_rush">Panic buying</string>
+    <string name="main_app">Application</string>
+    <string name="main_my">Mine</string>
+
+    <string name="main_app_title">Application</string>
+    <string name="main_app_content">Coming soon</string>
+    <string name="main_app_media">Media</string>
+    <string name="main_app_game">Game</string>
+    <string name="main_app_app">App</string>
+    <string name="main_app_zbg">ZBG</string>
+    <string name="main_app_coin_all">Coin all</string>
+    <string name="main_app_huo_ju">Huo ju</string>
+    <string name="main_app_my_token">My token</string>
+    <string name="main_app_talk_btc">BitcoinTalk</string>
+    <string name="main_app_news_btc">News.btc</string>
+    <string name="main_app_eight_btc">8btc</string>
+    <string name="main_app_eth_browser">Etherscan</string>
+    <string name="main_app_btc_browser">Btc.com</string>
+    <string name="main_app_to_loan">Borrowing</string>
+    <string name="main_app_mall">Mall</string>
+    <string name="main_app_not">Coming online soon</string>
+    <string name="main_app_not_1">Coming soon</string>
+    <string name="main_my_title">Mine</string>
+    <string name="main_my_record">Revenue record</string>
+    <string name="main_my_notice">Notice center</string>
+    <string name="main_my_feedback">Problem feedback</string>
+    <string name="main_my_setting">Account setting</string>
+    <string name="main_my_invited_text">My invitation code</string>
+    <string name="main_my_invited">Invite friends</string>
+    <string name="main_my_name">Please login</string>
+    <string name="main_my_invited_icon_text">Invite friends</string>
+    <string name="main_my_invited_icon_toast">CT Award for Invitation</string>
+    <string name="main_home_name">Name</string>
+    <string name="main_home_now_price">Latest price</string>
+    <string name="main_home_node_game">Node race</string>
+    <string name="main_home_range">Price limit</string>
+    <string name="main_wallet_title">Wallet</string>
+    <string name="main_wallet_total_asset">Total assets</string>
+    <string name="main_wallet_available_asset">Available assets</string>
+    <string name="main_rush_title">Panic buying</string>
+    <string name="main_rush_record">Purchase record</string>
+    <string name="main_rush_time_h">hour</string>
+    <string name="main_rush_time_m">Minute</string>
+    <string name="main_rush_time_s">Second</string>
+    <string name="main_rush_total_amount">Current limited sale</string>
+    <string name="main_rush_now_amount">Already robbed</string>
+    <string name="main_rush_rule">&#160;\n
+        1.Panic buying CT  requires a 10-fold CT margin in your wallet.\n
+        2.Panic buying time is once a day, and the specific time is countdown. \n
+        3.Panic buying freezes buying shares and deposits for up to 12 hours,\n
+        so as to protect other users from being harmed by scalping.
+    </string>
+    <string name="main_rush_finish">End</string>
+    <string name="main_rush_open">抢</string>
+    <string name="main_rush_open_down">Panic buying countdown</string>
+    <string name="main_rush_close_down">Preemptive countdown</string>
+    <string name="main_rush_rate_text">Panic buying rules</string>
+    <string name="main_rush_success">Successfully snatch</string>
+    <string name="main_rush_error_1">Flash sale after the countdown ends</string>
+
+    <string name="feedback_title">Problem feedback</string>
+
+    <string name="notice_center_title">Notice details</string>
+
+    <string name="activity_release_title">Release record</string>
+
+    <string name="usd_help_title">Use help</string>
+
+    <string name="rush_record_title">Panic buying record</string>
+
+    <string name="account_setting_title">Account setting</string>
+    <string name="account_setting_out_login">Log off</string>
+    <string name="account_setting_set_password">Password setting</string>
+    <string name="account_setting_use_help">Use help</string>
+    <string name="account_setting_switch_language">Language</string>
+    <string name="account_setting_language_simple_zh">Simple Chinese</string>
+    <string name="account_setting_language_en">English</string>
+    <string name="account_setting_check_version">Check update</string>
+
+    <string name="language_title">Language</string>
+    <string name="language_simple_zh">简体中文</string>
+    <string name="language_en">English</string>
+
+    <string name="password_setting_title">Password setting</string>
+    <string name="password_setting_modify_login">Change login password</string>
+    <string name="password_setting_modify_pay">Change asset password</string>
+    <string name="password_setting_modify_pay_psw">Change asset password</string>
+    <string name="password_setting_setting_pay_psw">Setting asset password</string>
+
+    <string name="profit_record_title">Revenue record</string>
+    <string name="profit_record_release">Release record</string>
+    <string name="profit_record_rush">Purchase record</string>
+    <string name="profit_record_achievement">Sharing performance</string>
+    <string name="profit_record_share">Share revenue</string>
+    <string name="profit_record_coin">Financial Benefits</string>
+
+    <string name="achievement_record_title">Sharing performance</string>
+    <string name="achievement_record_total">Total performance（CT）</string>
+    <string name="achievement_record_rank">Performance(CT)</string>
+    <string name="achievement_record_total_text">Total number</string>
+    <string name="achievement_record_number">Algebra</string>
+
+    <string name="deposit_profit_title">Financial Benefits</string>
+    <string name="deposit_profit_asset">Total amount ($)</string>
+    <string name="deposit_profit_profit">Total revenue (CT)</string>
+
+    <string name="deposit_title">Financial</string>
+    <string name="deposit_in">Transfer-in</string>
+    <string name="deposit_out">Transfer-out</string>
+    <string name="deposit_list_title">Profit record</string>
+
+    <string name="deposit_in_title">Transfer-in</string>
+    <string name="deposit_in_record">Transfer-in record</string>
+    <string name="deposit_in_all">All</string>
+    <string name="deposit_in_edit">Can be transferred</string>
+    <string name="deposit_in_btn">Confirm</string>
+    <string name="deposit_in_toast_1">Financial rules</string>
+    <string name="deposit_in_toast_2">&#160;\n
+        1. Deposit and withdraw at any time, no interest is calculated on the day of transfer,the income is calculated on the second day, the income is received on the third day\n
+        2. Transfer to the digital equivalent of the minimum amount of $100\n
+        3. Interest would be returned to the wallet each day on a CT basis and on a coin standard basis
+    </string>
+    <string name="deposit_in_error_1">Quantity cannot be empty</string>
+    <string name="deposit_in_error_2">Error in quantity input</string>
+    <string name="deposit_total_asset">amount </string>
+    <string name="deposit_total_profit">revenue (CT)</string>
+
+    <string name="deposit_out_title">Transfer-out</string>
+    <string name="deposit_out_record">Transfer-out record</string>
+    <string name="deposit_out_all">All</string>
+    <string name="deposit_out_edit">Can be Rolloff</string>
+    <string name="deposit_out_btn">Confirm</string>
+    <string name="deposit_out_error_1">Quantity cannot be empty</string>
+    <string name="deposit_out_error_2">Error in quantity input</string>
+    <string name="deposit_out_error_3">Sorry, your credit is running low</string>
+    <string name="deposit_out_error_4">Please set up the fund password first</string>
+    <string name="deposit_out_error_5">Password cannot be empty</string>
+
+    <string name="deposit_record_in_title">Transfer-in record</string>
+    <string name="deposit_record_out_title">Transfer-out record</string>
+
+    <string name="item_wallet_withdrawal">Withdraw</string>
+    <string name="item_wallet_recharge">Recharge</string>
+    <string name="item_wallet_exchange">Convert</string>
+    <string name="item_wallet_deposit">Financial</string>
+    <string name="item_wallet_available">Available：</string>
+    <string name="item_wallet_frozen">Frozen：</string>
+
+    <string name="invite_friend_title">Invitation details</string>
+    <string name="invite_friend_my">My invitation link</string>
+    <string name="invite_friend_copy">Copy link</string>
+
+    <string name="note_game_title">Node race</string>
+    <string name="note_game_number">Bonus pool this week</string>
+    <string name="note_game_first_name">Last week champion：</string>
+    <string name="note_game_first_number">Champion bonus：</string>
+    <string name="note_game_my_number">My ranking：</string>
+    <string name="note_game_rule">Reward rules</string>
+    <string name="note_game_top">Top ten this week</string>
+    <string name="note_game_ct">Performance(CT)</string>
+    <string name="note_game_my_not">Not listed</string>
+
+    <string name="node_game_rule_title">Award rules</string>
+    <string name="node_game_rule_open">Open</string>
+    <string name="node_game_rule_close">Pack up</string>
+    <string name="node_game_rule_open_text">View Detailed Rules</string>
+    <string name="node_game_rule_level">Reward level</string>
+    <string name="node_game_rule_level_text">&#160;Award</string>
+    <string name="node_game_rule_rate">Reward proportion</string>
+    <string name="node_game_rule_rank">Ranking</string>
+    <string name="node_game_rule_content1">
+        Distribute according to the ranking of the weekly direct promotion of the new performance\n
+        (No.1 - No.511)
+    </string>
+    <string name="node_game_rule_content2">&#160;\n
+        No.1 will solely win the first bonus, 10% CT of the total bonus pool\n
+        No.2-3 will share the second bonus equally, 10% CT of the total bonus pool\n
+        No.4-7 will share the third bonus equally, 10% CT of the total bonus pool\n
+        No.8-15 will share the fourth bonus equally, 10% CT of the total bonus pool\n
+        No.16-31 will share the fifth bonus equally, 12%CT of the total bonus pool\n
+        No.32-61 will share the sixth bonus equally, 12%CT of the total bonus pool\n
+        No.62-127 will share the seventh bonus equally, 12CT % of the total bonus pool\n
+        No.128-255 will share the eighth bonus equally, 12CT % of the total bonus pool\n
+        No.256-511 will share the ninth bonus equally, 12CT % of the total bonus pool\n
+        From 0:00 every Monday to 24:00 every Sunday, the total CT of bonus pool shall be settled
+    </string>
+
+    <string name="recharge_title">&#160;charge</string>
+    <string name="recharge_toast_1">Scan the qr code to pay me</string>
+    <string name="recharge_list">Recharge record</string>
+    <string name="recharge_code">0x</string>
+    <string name="recharge_btn">Copy address</string>
+
+    <string name="share_record_title">Revenue sharing</string>
+    <string name="share_record_total">Total profit（$）</string>
+
+    <string name="feed_back_edit_hint">Thank you for your valuable questions about the product. We will optimize the product and enhance the user experience as soon as possible.</string>
+    <string name="feed_back_btn">Submit</string>
+    <string name="feed_back_error_1">Submission cannot be empty</string>
+    <string name="feed_back_error_2">Mobile phone number cannot be empty</string>
+
+    <string name="withdrawal_title">&#160;withdraw</string>
+    <string name="withdrawal_toast_1">sure your address is correct before transferring money. \nYou will be liable for any wrong input</string>
+    <string name="withdrawal_btn">Confirm</string>
+    <string name="withdrawal_fee">Transfer charge：</string>
+    <string name="withdrawal_balance">Available balance：</string>
+    <string name="withdrawal_record_list">Withdrawal record</string>
+    <string name="withdrawal_amount_hint">Please enter withdrawal quantity</string>
+    <string name="withdrawal_address_hint">Please enter address</string>
+    <string name="withdrawal_error_1">Address cannot be empty</string>
+    <string name="withdrawal_error_2">Quantity cannot be empty</string>
+    <string name="withdrawal_error_3">Sorry, your credit is running low</string>
+    <string name="withdrawal_error_4">Error in quantity input</string>
+    <string name="withdrawal_error_5">Password cannot be empty</string>
+    <string name="withdrawal_error_6">Please set up the fund password first</string>
+
+    <string name="login_title">Compass Welcome to Compass</string>
+    <string name="login_forget">Forget password</string>
+    <string name="login_register">New user registration</string>
+    <string name="login_hint_account">Please enter your mobile phone number</string>
+    <string name="login_hint_password">Please enter password</string>
+    <string name="login_btn">Log in</string>
+    <string name="login_error_1">Mobile phone number cannot be empty</string>
+    <string name="login_error_2">Password cannot be empty</string>
+    <string name="login_error_4">Password error please reenter</string>
+
+    <string name="register_title">Register</string>
+    <string name="register_send_sms_code">Send</string>
+    <string name="register_hint_account">Please enter your mobile phone number</string>
+    <string name="register_hint_sms_code">Please enter verification code</string>
+    <string name="register_hint_password">Please enter password</string>
+    <string name="register_hint_invite">Please enter invitation code</string>
+    <string name="register_btn">Register</string>
+    <string name="register_error_1">Mobile phone number cannot be empty</string>
+    <string name="register_error_2">Verification code cannot be empty</string>
+    <string name="register_error_3">Password cannot be empty</string>
+    <string name="register_error_5">Error in input of validation code</string>
+    <string name="register_error_6">Password error please reenter</string>
+    <string name="register_error_7">Invitation code cannot be empty</string>
+
+    <string name="forget_login_psw_title">Forget password</string>
+    <string name="forget_login_psw_send_sms_code">Send</string>
+    <string name="forget_login_psw_hint_account">Please enter your mobile phone number</string>
+    <string name="forget_login_psw_hint_sms_code">Please enter verification code</string>
+    <string name="forget_login_psw_hint_password">Please enter password</string>
+    <string name="forget_login_psw_hint_password_again">Please enter password again</string>
+    <string name="forget_login_psw_btn">Submit</string>
+    <string name="forget_login_psw_error_1">Mobile phone number cannot be empty</string>
+    <string name="forget_login_psw_error_2">Verification code cannot be empty</string>
+    <string name="forget_login_psw_error_3">Password cannot be empty</string>
+    <string name="forget_login_psw_error_5">Error in input of validation code</string>
+    <string name="forget_login_psw_error_6">Password error please reenter</string>
+    <string name="forget_login_psw_error_7">Password error, please reenter</string>
+
+    <string name="modify_login_psw_title">Modify login password</string>
+    <string name="modify_login_psw_send_sms_code">Send</string>
+    <string name="modify_login_psw_hint_sms_code">Please enter verification code</string>
+    <string name="modify_login_psw_hint_old_password">Please enter the old password</string>
+    <string name="modify_login_psw_hint_new_password">Please enter a new password</string>
+    <string name="modify_login_psw_hint_new_password_again">Please enter your password again</string>
+    <string name="modify_login_psw_btn">Confirm</string>
+    <string name="modify_login_psw_error_1">Verification code cannot be empty</string>
+    <string name="modify_login_psw_error_2">Old passwords cannot be empty</string>
+    <string name="modify_login_psw_error_3">New password cannot be empty</string>
+    <string name="modify_login_psw_error_4">Password error, please reenter</string>
+    <string name="modify_login_psw_error_5">Verification code error please reenter</string>
+    <string name="modify_login_psw_error_6">Old password error please reenter</string>
+    <string name="modify_login_psw_error_7">New password error please reenter</string>
+
+    <string name="modify_pay_psw_title">Modify Payment Password</string>
+    <string name="modify_pay_psw_send_sms_code">Send</string>
+    <string name="modify_pay_psw_hint_sms_code">Please enter verification code</string>
+    <string name="modify_pay_psw_hint_password">Please enter password</string>
+    <string name="modify_pay_psw_hint_password_again">Please enter password again</string>
+    <string name="modify_pay_psw_btn">Confirm</string>
+    <string name="modify_pay_psw_error_1">Verification code cannot be empty</string>
+    <string name="modify_pay_psw_error_2">Passwords cannot be empty</string>
+    <string name="modify_pay_psw_error_3">Password error, please reenter</string>
+    <string name="modify_pay_psw_error_4">Verification code error please reenter</string>
+    <string name="modify_pay_psw_error_5">Password error, please reenter</string>
+
+    <string name="setting_pay_psw_title">Setting Payment Password</string>
+    <string name="setting_pay_psw_hint_password">Please enter password</string>
+    <string name="setting_pay_psw_hint_password_again">Please enter password again</string>
+    <string name="setting_pay_psw_btn">Confirm</string>
+    <string name="setting_pay_psw_error_1">Passwords cannot be empty</string>
+    <string name="setting_pay_psw_error_2">Password error, please reenter</string>
+    <string name="setting_pay_psw_error_3">Password error, please reenter</string>
+
+    <string name="select_county_save">Save</string>
+    <string name="select_county_title">Country and region</string>
+
+    <string name="generation">generation</string>
+
+    <string name="zero">Zero</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="six">Six</string>
+    <string name="seven">Seven</string>
+    <string name="eight">Eight</string>
+    <string name="nine">Nine</string>
+
+    <string name="update_title">Discover the new version</string>
+    <string name="update_btn">To download</string>
+
+    <string name="item_achievement_record_amount_1">Ordinary node</string>
+    <string name="item_achievement_record_amount_2"> drill joint</string>
+
+    <string name="release_total_balance">Remaining released</string>
+    <string name="release_total_out">Total released</string>
+    <string name="release_today_balance">Snapped up today</string>
+    <string name="release_today_asset">Already snapped up today</string>
+    <string name="release_total_asset">All snapped up</string>
+
+    <string name="window_exchange_title">exchange</string>
+    <string name="window_exchange_btn">Confirm</string>
+    <string name="window_exchange_edit_hint">Available </string>
+    <string name="window_exchange_error_1">Quantity cannot be empty</string>
+    <string name="window_exchange_error_2">Error in quantity input</string>
+    <string name="window_exchange_error_3">Sorry, your credit is running low</string>
+
+    <string name="window_password_edit_hint">Please input the payment password</string>
+    <string name="window_password_btn">Confirm</string>
+    <string name="window_password_edit_title">Input payment password</string>
+    <string name="window_password_error_1">Password cannot be empty</string>
+
+    <string name="window_rush_title">抢购</string>
+    <string name="window_rush_content">
+        您本次有%1$.4f个待抢CT，需要%2$.4f个CT作为保证金。\n
+        您当前的保证金为0，无法参与抢购
+    </string>
+    <string name="window_rush_content1">
+        您本次有%1$.4f个待抢CT，需要%2$.4f个CT作为保证金。\n
+        您当前的保证金为%3$.4f个CT，本次只能抢%4$.4f个CT。
+    </string>
+    <string name="window_rush_btn">确定</string>
+
+    <string name="call_my_title">Contact us</string>
+    <string name="call_my_save">save</string>
+    <string name="call_my_we_chat">We chat</string>
+    <string name="call_my_facebook">Facebook</string>
+    <string name="main_call_my">Contact us</string>
+
+</resources>

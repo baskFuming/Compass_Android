@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xxx.compass.ui.main.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_1"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorMainBack"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/main_home"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/main_home_image"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/main_home_default" />
+
+            <TextView
+                android:id="@+id/main_home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/main_home"
+                android:textColor="#F7FFFF"
+                android:textSize="@dimen/main_bottom_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_wallet"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/main_wallet_image"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/main_wallet_default" />
+
+            <TextView
+                android:id="@+id/main_wallet_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/main_wallet"
+                android:textColor="@color/colorMainBottomDefault"
+                android:textSize="@dimen/main_bottom_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_app"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/main_app_image"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/main_app_default" />
+
+            <TextView
+                android:id="@+id/main_app_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/main_app"
+                android:textColor="@color/colorMainBottomDefault"
+                android:textSize="@dimen/main_bottom_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_my"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/main_my_image"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/main_my_default" />
+
+            <TextView
+                android:id="@+id/main_my_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/main_my"
+                android:textColor="@color/colorMainBottomDefault"
+                android:textSize="@dimen/main_bottom_size" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_1" />
+
+    <ImageView
+        android:id="@+id/main_rush_btn"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:src="@mipmap/main_rush_btn" />
+
+</RelativeLayout>
