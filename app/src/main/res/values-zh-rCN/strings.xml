@@ -197,7 +197,7 @@
     <string name="node_game_rule_rank">名次</string>
     <string name="node_game_rule_level_text">等奖</string>
     <string name="node_game_rule_content1">
-        根据每周直推新增业绩的排名进行派
+        根据每周直推新增业绩的排名进行分配
         \n(第1名-第511名)
     </string>
     <string name="node_game_rule_content2">&#160;\n
@@ -349,6 +349,7 @@
     <string name="window_exchange_error_1">数量不能为空</string>
     <string name="window_exchange_error_2">数量输入有误</string>
     <string name="window_exchange_error_3">余额不足</string>
+    <string name="window_exchange_error_4">请先设置资金密码</string>
 
     <string name="window_password_edit_hint">请输入支付密码</string>
     <string name="window_password_btn">确定</string>

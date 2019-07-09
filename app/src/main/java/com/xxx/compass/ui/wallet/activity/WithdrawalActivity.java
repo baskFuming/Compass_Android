@@ -24,6 +24,8 @@ import com.xxx.compass.model.http.Api;
 import com.xxx.compass.model.http.ApiCallback;
 import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.http.bean.WithdrawalRecordBean;
+import com.xxx.compass.model.http.utils.ApiCode;
+import com.xxx.compass.model.http.utils.ApiError;
 import com.xxx.compass.model.sp.SharedConst;
 import com.xxx.compass.model.sp.SharedPreferencesUtil;
 import com.xxx.compass.model.utils.KeyBoardUtil;
@@ -94,7 +96,7 @@ public class WithdrawalActivity extends BaseTitleActivity implements SwipeRefres
         fee = intent.getDoubleExtra("fee", 0.0);
         coinId = getIntent().getStringExtra("coinId");
         mBalance.setText(String.valueOf(balance));
-        mFee.setText(getString(R.string.withdrawal_fee) + fee  + coinId);
+        mFee.setText(getString(R.string.withdrawal_fee) + fee + coinId);
 
         mAdapter = new WithdrawalRecordAdapter(mList);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
@@ -250,12 +252,6 @@ public class WithdrawalActivity extends BaseTitleActivity implements SwipeRefres
             return;
         }
 
-        if (!SharedPreferencesUtil.getInstance().getBoolean(SharedConst.IS_SETTING_PAY_PSW)) {
-            ToastUtil.showToast(R.string.withdrawal_error_6);
-            startActivity(new Intent(this, SettingPayPswActivity.class));
-            return;
-        }
-
         this.amount = Double.parseDouble(amount);
 
         if (mPasswordWindow == null || !mPasswordWindow.isShowing()) {
@@ -299,6 +295,12 @@ public class WithdrawalActivity extends BaseTitleActivity implements SwipeRefres
 
                     @Override
                     public void onError(int errorCode, String errorMessage) {
+                        super.onError(errorCode, errorMessage);
+                        if (errorCode == ApiCode.PAY_NOT_SETTING) {
+                            ToastUtil.showToast(getString(R.string.window_exchange_error_4));
+                            startActivity(new Intent(WithdrawalActivity.this, SettingPayPswActivity.class));
+                            return;
+                        }
                         ToastUtil.showToast(errorMessage);
                     }
 

@@ -13,6 +13,7 @@ import com.xxx.compass.model.http.Api;
 import com.xxx.compass.model.http.ApiCallback;
 import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.http.bean.base.BooleanBean;
+import com.xxx.compass.model.http.utils.ApiCode;
 import com.xxx.compass.model.http.utils.ApiType;
 import com.xxx.compass.model.sp.SharedConst;
 import com.xxx.compass.model.sp.SharedPreferencesUtil;
@@ -125,12 +126,6 @@ public class DepositOutActivity extends BaseTitleActivity implements PasswordWin
             return;
         }
 
-        if (!SharedPreferencesUtil.getInstance().getBoolean(SharedConst.IS_SETTING_PAY_PSW)) {
-            ToastUtil.showToast(R.string.deposit_out_error_3);
-            startActivity(new Intent(this, SettingPayPswActivity.class));
-            return;
-        }
-
         if (mPasswordWindow == null || !mPasswordWindow.isShowing()) {
             mPasswordWindow = PasswordWindow.getInstance(this);
             mPasswordWindow.setCallback(this);
@@ -179,6 +174,11 @@ public class DepositOutActivity extends BaseTitleActivity implements PasswordWin
                     @Override
                     public void onError(int errorCode, String errorMessage) {
                         super.onError(errorCode, errorMessage);
+                        if (errorCode == ApiCode.PAY_NOT_SETTING) {
+                            ToastUtil.showToast(getString(R.string.deposit_out_error_4));
+                            startActivity(new Intent(DepositOutActivity.this, SettingPayPswActivity.class));
+                            return;
+                        }
                         ToastUtil.showToast(errorMessage);
                     }
 

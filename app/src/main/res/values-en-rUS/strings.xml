@@ -349,13 +349,14 @@
     <string name="window_exchange_error_1">Quantity cannot be empty</string>
     <string name="window_exchange_error_2">Error in quantity input</string>
     <string name="window_exchange_error_3">Sorry, your credit is running low</string>
+    <string name="window_exchange_error_4">Please set up the fund password first</string>
 
     <string name="window_password_edit_hint">Please input the payment password</string>
     <string name="window_password_btn">Confirm</string>
     <string name="window_password_edit_title">Input payment password</string>
     <string name="window_password_error_1">Password cannot be empty</string>
 
-    <string name="window_rush_title">抢购</string>
+    <string name="window_rush_title">rush</string>
     <string name="window_rush_content">
         您本次有%1$.4f个待抢CT，需要%2$.4f个CT作为保证金。\n
         您当前的保证金为0，无法参与抢购
@@ -364,7 +365,7 @@
         您本次有%1$.4f个待抢CT，需要%2$.4f个CT作为保证金。\n
         您当前的保证金为%3$.4f个CT，本次只能抢%4$.4f个CT。
     </string>
-    <string name="window_rush_btn">确定</string>
+    <string name="window_rush_btn">Confirm</string>
 
     <string name="call_my_title">Contact us</string>
     <string name="call_my_save">save</string>
