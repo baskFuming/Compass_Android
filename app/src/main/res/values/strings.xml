@@ -374,5 +374,8 @@
     <string name="main_call_my">联系我们</string>
     <string name="conversion_profit_title">转化收益</string>
     <string name="profit_record_conversion">转化收益</string>
+    
+    <string name="current_pro">当前抢购进度：</string>
+    <string name="call_my_twitter">推特</string>
 
 </resources>

@@ -1,29 +1,27 @@
 package com.xxx.compass.base.activity;
 
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 
-import com.xxx.compass.base.App;
-import com.xxx.compass.model.utils.PermissionUtil;
 import com.gyf.barlibrary.ImmersionBar;
+import com.xxx.compass.model.utils.PermissionUtil;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 public abstract class BaseActivity extends BaseLanguageActivity {
 
     private ImmersionBar mImmersionBar;
     private boolean isShowData;  //用于绑定Activity与网络请求的生命周期是否可以加载数据
+    private Unbinder unbinder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
 
+        unbinder = ButterKnife.bind(this);
         //可以加载数据
         isShowData = true;
 
@@ -70,6 +68,10 @@ public abstract class BaseActivity extends BaseLanguageActivity {
     protected void onDestroy() {
         isShowData = false;
         if (mImmersionBar != null) mImmersionBar.destroy();
+        if (unbinder != null) {
+            unbinder.unbind();
+            unbinder = null;
+        }
         super.onDestroy();
     }
 

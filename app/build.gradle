@@ -13,24 +13,24 @@ android {
         applicationId "com.xxx.compass"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 7
-        versionName "2.0.0" //当前版本2.0.0  / 7      / 7.8
+        versionCode 8
+        versionName "2.0.1" //当前版本2.0.0  / 7      / 7.8
 //        versionName "1.0.0" //test
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
         config {
-            storeFile file('F:/project/compass_android/compass.jks')
-            storePassword '123456'
-            keyAlias 'android'
-            keyPassword '123456'
+//            storeFile file('F:/project/compass_android/compass.jks')   /Users/mac/Desktop/compass.jks
+//            storePassword '123456'
+//            keyAlias 'android'
+//            keyPasswordsword '123456'
         }
         testConfig {
-            storeFile file('F:/project/compass_android/compass_test.jks')
-            storePassword '123456'
-            keyAlias 'android_test'
-            keyPassword '123456'
+//            storeFile file('F:/project/compass_android/compass_test.jks')
+//            storePassword '123456'
+//            keyAlias 'android_test'
+//            keyAliaseyPassword '123456'
         }
     }
 
@@ -44,7 +44,7 @@ android {
             zipAlignEnabled true // Zipalign优化
             shrinkResources true  // 移除无用的resource文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
         }
         debug {
             applicationIdSuffix ".test"         // 测试包增加包名后缀
@@ -54,7 +54,7 @@ android {
             ]
             buildConfigField "boolean", "LOG_DEBUG", "true"   // 显示Log
             minifyEnabled false // 不混淆
-            signingConfig signingConfigs.testConfig
+//            signingConfig signingConfigs.testConfig
         }
     }
 //    greendao {

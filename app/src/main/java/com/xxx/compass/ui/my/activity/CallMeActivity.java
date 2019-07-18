@@ -2,15 +2,12 @@ package com.xxx.compass.ui.my.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.xxx.compass.ConfigClass;
 import com.xxx.compass.R;
 import com.xxx.compass.base.activity.BaseTitleActivity;
 import com.xxx.compass.model.utils.ImageUtil;
-import com.xxx.compass.model.utils.ZXingUtil;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -40,7 +37,7 @@ public class CallMeActivity extends BaseTitleActivity {
 //        mFacebookBitmap = ZXingUtil.createQRCode(ConfigClass.CALL_ME_FACEBOOK, (int) getResources().getDimension(R.dimen.zxCode_call_me_size));
 //        mWeChatBitmap = ZXingUtil.createQRCode(ConfigClass.CALL_ME_WE_CHAT, (int) getResources().getDimension(R.dimen.zxCode_call_me_size));
         mFacebookBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.facebook_code);
-        mWeChatBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.we_chat_code);
+        mWeChatBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.twitter_code);
         mFacebookCode.setImageBitmap(mFacebookBitmap);
         mWeChatCode.setImageBitmap(mWeChatBitmap);
     }

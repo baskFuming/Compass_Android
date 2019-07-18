@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="22dp"
             android:layout_marginTop="19dp"
-            android:text="@string/call_my_we_chat"
+            android:text="@string/call_my_twitter"
             android:textColor="@color/colorText"
             android:textSize="15dp" />
 

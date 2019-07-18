@@ -373,4 +373,7 @@
     <string name="call_my_facebook">Facebook</string>
     <string name="main_call_my">联系我们</string>
 
+    <string name="current_pro">当前抢购进度：</string>
+    <string name="call_my_twitter">推特</string>
+
 </resources>

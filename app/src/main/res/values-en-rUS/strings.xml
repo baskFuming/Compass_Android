@@ -373,4 +373,6 @@
     <string name="call_my_facebook">Facebook</string>
     <string name="main_call_my">Contact us</string>
 
+    <string name="current_pro">Current snapping progress:</string>
+    <string name="call_my_twitter">Twitter</string>
 </resources>
