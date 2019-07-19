@@ -98,7 +98,8 @@
         <activity android:name=".ui.my.activity.AchievementRecordActivity" />
         <activity android:name=".ui.wallet.activity.DepositRecordActivity" />
         <activity android:name=".ui.my.activity.CallMeActivity" />
-        <activity android:name=".ui.my.activity.ConversionProfitActivity"></activity>
+        <activity android:name=".ui.my.activity.ConversionProfitActivity" />
+        <activity android:name=".ui.app.activity.GameActivity"></activity>
     </application>
 
 </manifest>

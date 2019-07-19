@@ -4,6 +4,7 @@ import com.xxx.compass.model.http.bean.AchievementRecordBean;
 import com.xxx.compass.model.http.bean.AppVersionBean;
 import com.xxx.compass.model.http.bean.ConversionProfitBean;
 import com.xxx.compass.model.http.bean.DoExceptionBean;
+import com.xxx.compass.model.http.bean.GameBean;
 import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.http.bean.DepositInfoBean;
 import com.xxx.compass.model.http.bean.DepositProfitBean;
@@ -176,6 +177,24 @@ public interface ApiService {
             @Field("page") int pageNo,
             @Field("row") int pageSize
     );
+
+    //获取游戏列表
+    @FormUrlEncoded
+    @POST("/CT/invest/game/getGameList")
+    Observable<BaseBean<List<GameBean>>> getGameList(
+            @Field("userId") String userId
+    );
+
+
+    //获取游戏列表
+    @FormUrlEncoded
+    @POST("/CT/invest/game/getGameRankLogs")
+    Observable<BaseBean<List<GameBean>>> getGameLogList(
+            @Field("userId") String userId,
+            @Field("page") int pageNo,
+            @Field("row") int pageSize
+    );
+
 
 
     //----------------------------------------------------------操作----------------------------------------------------------------------------------------------------------------------------//
