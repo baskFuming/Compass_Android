@@ -375,4 +375,6 @@
 
     <string name="current_pro">Current snapping progress:</string>
     <string name="call_my_twitter">Twitter</string>
+    <string name="window_password_edit_send">Please enter SMS verification code</string>
+
 </resources>

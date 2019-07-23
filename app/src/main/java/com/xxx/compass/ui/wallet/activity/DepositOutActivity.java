@@ -132,16 +132,14 @@ public class DepositOutActivity extends BaseTitleActivity implements PasswordWin
             mPasswordWindow.show();
         }
     }
-
     @Override
-    public void callback(String password) {
+    public void callback(String password, String code) {
         if (password.isEmpty()) {
             ToastUtil.showToast(R.string.deposit_out_error_5);
             return;
         }
         depositOut(password);
     }
-
     /**
      * @Model 理财转出
      */
@@ -201,6 +199,7 @@ public class DepositOutActivity extends BaseTitleActivity implements PasswordWin
                     }
                 });
     }
+
 
 
 }

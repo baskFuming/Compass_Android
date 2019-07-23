@@ -22,10 +22,9 @@ import com.xxx.compass.base.activity.BaseTitleActivity;
 import com.xxx.compass.base.dialog.LoadingDialog;
 import com.xxx.compass.model.http.Api;
 import com.xxx.compass.model.http.ApiCallback;
-import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.http.bean.WithdrawalRecordBean;
+import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.http.utils.ApiCode;
-import com.xxx.compass.model.http.utils.ApiError;
 import com.xxx.compass.model.sp.SharedConst;
 import com.xxx.compass.model.sp.SharedPreferencesUtil;
 import com.xxx.compass.model.utils.KeyBoardUtil;
@@ -76,6 +75,8 @@ public class WithdrawalActivity extends BaseTitleActivity implements SwipeRefres
     private List<WithdrawalRecordBean> mList = new ArrayList<>();
     private LoadingDialog mLoadingDialog;
     private PasswordWindow mPasswordWindow;
+    private String code = "中国";    //默认是中国 +86
+
 
     @Override
     protected String initTitle() {
@@ -126,7 +127,6 @@ public class WithdrawalActivity extends BaseTitleActivity implements SwipeRefres
                 break;
         }
     }
-
     @Override
     public void finish() {
         KeyBoardUtil.closeKeyBord(this, mAddress);
@@ -262,20 +262,23 @@ public class WithdrawalActivity extends BaseTitleActivity implements SwipeRefres
     }
 
     @Override
-    public void callback(String password) {
+    public void callback(String password,String code) {
         if (password.isEmpty()) {
             ToastUtil.showToast(R.string.withdrawal_error_5);
             return;
         }
-        withdrawal(password);
+        if (code.isEmpty()) {
+            ToastUtil.showToast(R.string.forget_login_psw_error_2);
+            return;
+        }
+        withdrawal(password,code);
     }
-
     /**
      * @Model 提现
      */
-    private void withdrawal(String password) {
+    private void withdrawal(String password,String code) {
         String userId = SharedPreferencesUtil.getInstance().getString(SharedConst.VALUE_USER_ID);
-        Api.getInstance().withdrawal(userId, coinId, fee, amount, address, password)
+        Api.getInstance().withdrawal(userId, coinId, fee, amount, address, password,code)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ApiCallback<Object>(this) {

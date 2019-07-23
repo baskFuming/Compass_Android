@@ -19,7 +19,6 @@ import com.xxx.compass.model.http.bean.GameBean;
 import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.sp.SharedConst;
 import com.xxx.compass.model.sp.SharedPreferencesUtil;
-import com.xxx.compass.model.utils.ToastUtil;
 import com.xxx.compass.ui.app.activity.GameActivity;
 import com.xxx.compass.ui.app.adapter.AppGameAdapter;
 
@@ -29,6 +28,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -46,6 +46,7 @@ public class AppFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
 
     private List<GameBean> mList = new ArrayList<>();
     private AppGameAdapter mAdapter;
+    private String userId;
 
     @Override
     protected int getLayoutId() {
@@ -54,6 +55,7 @@ public class AppFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
 
     @Override
     protected void initData() {
+        userId = SharedPreferencesUtil.getInstance().getString(SharedConst.VALUE_USER_ID);
         mAdapter = new AppGameAdapter(mList);
         mRecycler.setLayoutManager(new GridLayoutManager(getContext(), 4));
         mRecycler.setAdapter(mAdapter);
@@ -108,17 +110,21 @@ public class AppFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        loadGameList();
+    }
+
+    @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         Intent intent = new Intent(getActivity(), GameActivity.class);
         intent.putExtra("data", mList.get(position));
         startActivity(intent);
     }
-
     /**
      * @Model 获取游戏列表
      */
     private void loadGameList() {
-        String userId = SharedPreferencesUtil.getInstance().getString(SharedConst.VALUE_USER_ID);
         Api.getInstance().getGameList(userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -163,7 +169,22 @@ public class AppFragment extends BaseFragment implements SwipeRefreshLayout.OnRe
                         mRecycler.setVisibility(View.GONE);
                         mRefresh.setRefreshing(false);
                     }
+
+                    @Override
+                    public void onStart(Disposable d) {
+                        super.onStart(d);
+                        if (mRefresh != null) {
+                            mRefresh.setRefreshing(true);
+                        }
+                    }
+
+                    @Override
+                    public void onEnd() {
+                        super.onEnd();
+                        if (mRefresh != null) {
+                            mRefresh.setRefreshing(false);
+                        }
+                    }
                 });
     }
-
 }

@@ -32,11 +32,11 @@ public class SelectCountyAdapter extends BaseQuickAdapter<CountyBean, BaseViewHo
                 .setText(R.id.item_select_county_code, item.getAreaCode());
 
         if (helper.getAdapterPosition() == position) {
-            helper.setTextColor(R.id.item_select_county_name, Color.parseColor("@color/colorMain"))
-                    .setTextColor(R.id.item_select_county_code, Color.parseColor("@color/colorMain"));
+            helper.setTextColor(R.id.item_select_county_name, Color.parseColor("#2E5EF4"))
+                    .setTextColor(R.id.item_select_county_code, Color.parseColor("#2E5EF4"));
         } else {
-            helper.setTextColor(R.id.item_select_county_name, Color.parseColor("@color/colorText"))
-                    .setTextColor(R.id.item_select_county_code, Color.parseColor("@color/colorText"));
+            helper.setTextColor(R.id.item_select_county_name, Color.parseColor("#F6F6F6"))
+                    .setTextColor(R.id.item_select_county_code, Color.parseColor("#F6F6F6"));
         }
     }
 }

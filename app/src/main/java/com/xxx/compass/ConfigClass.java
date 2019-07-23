@@ -7,8 +7,8 @@ public class ConfigClass {
     /**
      * 服务器地址
      */
-//    public static final String BASE_URL = "https://compasschain.io";   //正式服务器地址
-    public static final String BASE_URL = "https://torchex.global";   //测试服务器地址
+    public static final String BASE_URL = "https://compasschain.io";   //正式服务器地址
+//    public static final String BASE_URL = "https://torchex.global";   //测试服务器地址
 //    public static final String BASE_URL = " http://compasschain.io:9090";   //脚本地址
 
     /**

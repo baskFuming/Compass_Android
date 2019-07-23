@@ -6,143 +6,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000B08"
+    android:fitsSystemWindows="true"
     tools:context="com.xxx.compass.ui.home.HomeFragment">
 
-    <android.support.design.widget.CoordinatorLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <android.support.design.widget.AppBarLayout
-            android:id="@+id/main_home_app_bar"
+        <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <android.support.design.widget.CollapsingToolbarLayout
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/main_home_app_bar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll">
+                android:layout_height="wrap_content">
 
-                <RelativeLayout
-                    android:id="@+id/home_1"
+                <android.support.design.widget.CollapsingToolbarLayout
                     android:layout_width="match_parent"
-                    android:layout_height="239dp"
-                    android:background="@color/colorMainBack"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                        <RelativeLayout
+                            android:id="@+id/home_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="239dp"
+                            android:background="@color/colorMainBack"
+                            android:orientation="vertical">
 
-                    <com.youth.banner.Banner
-                        android:id="@+id/main_home_banner"
-                        android:layout_width="match_parent"
-                        android:layout_height="175dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:layout_marginTop="30dp" />
+                            <com.youth.banner.Banner
+                                android:id="@+id/main_home_banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="175dp"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_marginTop="30dp" />
+
+                            <TextView
+                                android:id="@+id/home_node_game"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="43dp"
+                                android:background="@drawable/shape_home_node_game"
+                                android:gravity="center"
+                                android:paddingLeft="13dp"
+                                android:paddingRight="13dp"
+                                android:text="@string/main_home_node_game"
+                                android:textColor="@color/colorText"
+                                android:textSize="16dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_below="@id/main_home_banner"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp"
+                                android:gravity="center_vertical">
+                                <ImageView
+                                    android:id="@+id/main_home_notice_icon"
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:src="@mipmap/home_notice" />
+                                <ViewFlipper
+                                    android:id="@+id/main_home_view_flipper"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="7dp"
+                                    android:autoStart="true"
+                                    android:flipInterval="3000"
+                                    android:inAnimation="@anim/anim_flipper_in"
+                                    android:outAnimation="@anim/anim_flipper_out" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="#000B08">
 
                     <TextView
-                        android:id="@+id/home_node_game"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="43dp"
-                        android:background="@drawable/shape_home_node_game"
-                        android:gravity="center"
-                        android:paddingLeft="13dp"
-                        android:paddingRight="13dp"
-                        android:text="@string/main_home_node_game"
-                        android:textColor="@color/colorText"
-                        android:textSize="16dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_below="@id/main_home_banner"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:gravity="center_vertical">
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="95dp"
+                        android:text="@string/main_home_name"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/text_size" />
 
-                        <ImageView
-                            android:id="@+id/main_home_notice_icon"
-                            android:layout_width="13dp"
-                            android:layout_height="13dp"
-                            android:src="@mipmap/home_notice" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="189dp"
+                        android:text="@string/main_home_now_price"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/text_size" />
 
-                        <ViewFlipper
-                            android:id="@+id/main_home_view_flipper"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="7dp"
-                            android:autoStart="true"
-                            android:flipInterval="3000"
-                            android:inAnimation="@anim/anim_flipper_in"
-                            android:outAnimation="@anim/anim_flipper_out" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="288dp"
+                        android:text="@string/main_home_range"
+                        android:textColor="@color/colorText"
+                        android:textSize="@dimen/text_size" />
 
-                    </LinearLayout>
+                </FrameLayout>
 
-                </RelativeLayout>
+            </android.support.design.widget.AppBarLayout>
 
-            </android.support.design.widget.CollapsingToolbarLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:background="#000B08">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="95dp"
-                    android:text="@string/main_home_name"
-                    android:textColor="@color/colorText"
-                    android:textSize="@dimen/text_size" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="189dp"
-                    android:text="@string/main_home_now_price"
-                    android:textColor="@color/colorText"
-                    android:textSize="@dimen/text_size" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="288dp"
-                    android:text="@string/main_home_range"
-                    android:textColor="@color/colorText"
-                    android:textSize="@dimen/text_size" />
-
-            </FrameLayout>
-
-        </android.support.design.widget.AppBarLayout>
-
-        <android.support.v4.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            <FrameLayout
+            <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingEnd="12dp"
-                android:paddingStart="12dp">
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/main_home_recycler"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="false"
-                    tools:ignore="UnusedAttribute" />
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp">
 
-                <include layout="@layout/include_not_data" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/main_home_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        tools:ignore="UnusedAttribute" />
 
-            </FrameLayout>
+                    <include layout="@layout/include_not_data" />
 
-        </android.support.v4.widget.NestedScrollView>
+                </FrameLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+            </android.support.v4.widget.NestedScrollView>
 
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
 </android.support.v4.widget.SwipeRefreshLayout>
 

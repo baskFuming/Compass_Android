@@ -375,5 +375,6 @@
 
     <string name="current_pro">当前抢购进度：</string>
     <string name="call_my_twitter">推特</string>
+    <string name="window_password_edit_send">请输入短信验证码</string>
 
 </resources>

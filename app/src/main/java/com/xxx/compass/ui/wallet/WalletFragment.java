@@ -12,14 +12,13 @@ import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.xxx.compass.R;
-import com.xxx.compass.base.fragment.BaseFragment;
 import com.xxx.compass.base.dialog.LoadingDialog;
+import com.xxx.compass.base.fragment.BaseFragment;
 import com.xxx.compass.model.http.Api;
 import com.xxx.compass.model.http.ApiCallback;
 import com.xxx.compass.model.http.bean.DoExceptionBean;
-import com.xxx.compass.model.http.bean.base.BaseBean;
-import com.xxx.compass.model.http.bean.base.BooleanBean;
 import com.xxx.compass.model.http.bean.WalletBean;
+import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.http.utils.ApiType;
 import com.xxx.compass.model.sp.SharedConst;
 import com.xxx.compass.model.sp.SharedPreferencesUtil;
@@ -36,7 +35,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
@@ -75,7 +73,6 @@ public class WalletFragment extends BaseFragment implements SwipeRefreshLayout.O
         mRecycler.setAdapter(mAdapter);
         mRefresh.setOnRefreshListener(this);
         mAdapter.setOnItemChildClickListener(this);
-
         loadData(true);
     }
 

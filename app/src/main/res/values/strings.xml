@@ -115,6 +115,7 @@
     <string name="password_setting_modify_pay_psw">修改支付密码</string>
     <string name="password_setting_setting_pay_psw">设置支付密码</string>
 
+
     <string name="profit_record_title">收益记录</string>
     <string name="profit_record_release">释放记录</string>
     <string name="profit_record_rush">抢购记录</string>
@@ -355,6 +356,8 @@
     <string name="window_password_btn">确定</string>
     <string name="window_password_edit_title">输入支付密码</string>
     <string name="window_password_error_1">密码不能为空</string>
+    <string name="window_password_edit_send">请输入短信验证码</string>
+
 
     <string name="window_rush_title">抢购</string>
     <string name="window_rush_content">

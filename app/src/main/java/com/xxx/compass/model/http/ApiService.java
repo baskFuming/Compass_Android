@@ -5,6 +5,7 @@ import com.xxx.compass.model.http.bean.AppVersionBean;
 import com.xxx.compass.model.http.bean.ConversionProfitBean;
 import com.xxx.compass.model.http.bean.DoExceptionBean;
 import com.xxx.compass.model.http.bean.GameBean;
+import com.xxx.compass.model.http.bean.MemberAssetBean;
 import com.xxx.compass.model.http.bean.base.BaseBean;
 import com.xxx.compass.model.http.bean.DepositInfoBean;
 import com.xxx.compass.model.http.bean.DepositProfitBean;
@@ -186,7 +187,7 @@ public interface ApiService {
     );
 
 
-    //获取游戏列表
+    //游戏消耗日志
     @FormUrlEncoded
     @POST("/CT/invest/game/getGameRankLogs")
     Observable<BaseBean<List<GameBean>>> getGameLogList(
@@ -195,8 +196,38 @@ public interface ApiService {
             @Field("row") int pageSize
     );
 
+    //获取用户的可用CT
+    @FormUrlEncoded
+    @POST("/CT/invest/game/getMemberAsset")
+    Observable<BaseBean<MemberAssetBean>> getMemberAsset(
+            @Field("userId") String userId
+    );
 
+    //开始游戏
+    @FormUrlEncoded
+    @POST("/CT/invest/game/startGame")
+    Observable<BaseBean<BooleanBean>> getStartGame(
+            @Field("userId") String userId,
+            @Field("gameId") int gameId
 
+            );
+
+    // 更新比赛得分
+    @FormUrlEncoded
+    @POST("CT/invest/game/updateScore")
+    Observable<BaseBean<BooleanBean>> getUpdateScore(
+            @Field("userId") String userId,
+            @Field("gameId") int gameId,
+            @Field("score") String score
+    );
+
+    //获取当周前十排名接口
+    @FormUrlEncoded
+    @POST(" /CT/invest/game/getGameScoreList")
+    Observable<BaseBean<List<GameBean>>> getGameScoreList(
+            @Field("userId") String userId,
+            @Field("gameId") int gameId
+    );
     //----------------------------------------------------------操作----------------------------------------------------------------------------------------------------------------------------//
 
 
@@ -234,7 +265,7 @@ public interface ApiService {
     );
 
     //提现
-    @POST("/uc/withdraw/apply/withoutcode")
+    @POST("/uc/withdraw/apply/code")
     @FormUrlEncoded
     Observable<BaseBean<Object>> withdrawal(
             @Field("userId") String userId,
@@ -242,8 +273,22 @@ public interface ApiService {
             @Field("fee") double fee,
             @Field("amount") double amount,
             @Field("address") String address,
-            @Field("jyPassword") String jyPassword
+            @Field("jyPassword") String jyPassword,
+            @Field("code") String code
     );
+
+    /**
+     * 提现发送验证码
+     *
+     * @return
+     */
+    @POST(" /uc/mobile/withdraw/code")
+    @FormUrlEncoded
+    Observable<BaseBean<Object>> sendWithdrawal(
+            @Field("phone") String phone,
+            @Field("country") String country
+    );
+
 
     //抢购
     @POST("/CT/invest/compass/doFlashsale")
@@ -302,6 +347,7 @@ public interface ApiService {
     Observable<BaseBean<Object>> sendSMSCode(
             @Field("phone") String phone,
             @Field("country") String country
+
     );
 
     //注册
