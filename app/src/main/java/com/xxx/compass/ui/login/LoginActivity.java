@@ -122,7 +122,6 @@ public class LoginActivity extends BaseActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ApiCallback<LoginBean>(this) {
-
                     @Override
                     public void onSuccess(BaseBean<LoginBean> bean) {
                         if (bean != null) {

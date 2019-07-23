@@ -22,8 +22,6 @@ public class ConfigClass {
     public static final String APP_COIN_ALL = "https://www.coinall.live/";    //Coin All
     public static final String APP_MY_TOKEN = "https://www.mytoken.io/";    //My Token
     public static final String APP_ZBG = "https://www.zbg.com/";    //中币
-
-
     /**
      * 联系我们地址
      */
