@@ -29,7 +29,6 @@ import butterknife.OnClick;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-
 /**
  * @Page 登录页面
  * @Author xxx
@@ -56,7 +55,6 @@ public class LoginActivity extends BaseActivity {
         String accessToken = MD5Util.getMD5(SystemUtil.getSerialNumber() + SystemUtil.getUUID());
         SharedPreferencesUtil util = SharedPreferencesUtil.getInstance();
         util.saveEncryptString(SharedConst.ENCRYPT_VALUE_TOKEN_2, accessToken);
-
 
         //保存记录
         String phone = SharedPreferencesUtil.getInstance().getString(SharedConst.VALUE_USER_PHONE);

@@ -44,6 +44,8 @@ public class ReleaseRecordActivity extends BaseTitleActivity implements SwipeRef
     TextView mTotalBalance;
     @BindView(R.id.release_total_out)
     TextView mTotalOut;
+    @BindView(R.id.release_total_open)
+    TextView mTotalOpen;
     @BindView(R.id.release_today_balance)
     TextView mTodayBalance;
     @BindView(R.id.release_today_asset)
@@ -171,6 +173,7 @@ public class ReleaseRecordActivity extends BaseTitleActivity implements SwipeRef
                                 mTodayBalance.setText(data.getTodayFlashsaleAsset());
                                 mTodayAsset.setText(data.getTodayReleaseAsset());
                                 mTotalAsset.setText(data.getAllFlashsaleAsset());
+                                mTotalOpen.setText(data.getAllDynamicReleaseAsset());
                             }
                         }
                     }

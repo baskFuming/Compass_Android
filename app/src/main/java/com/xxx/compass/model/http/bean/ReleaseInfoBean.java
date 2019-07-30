@@ -9,6 +9,12 @@ public class ReleaseInfoBean {
     private double todayFlashsaleAsset;
     private double todayReleaseAsset;
     private double allRemainAsset;
+    private double allDynamicReleaseAsset;
+
+    public String getAllDynamicReleaseAsset() {
+        return StringUtil.getMoney(allDynamicReleaseAsset) + " CT";
+    }
+
 
     public String getAllReleaseAsset() {
         return StringUtil.getMoney(allReleaseAsset) + " CT";
@@ -29,5 +35,6 @@ public class ReleaseInfoBean {
     public String getAllRemainAsset() {
         return StringUtil.getMoney(allRemainAsset) + " CT";
     }
+
 
 }

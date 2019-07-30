@@ -343,6 +343,9 @@
     <string name="release_today_balance">今日待抢</string>
     <string name="release_today_asset">今日已抢</string>
     <string name="release_total_asset">总已抢购</string>
+    <string name="release_total_quit">静态已释放</string>
+    <string name="release_total_open">分享已释放</string>
+
 
     <string name="window_exchange_title">兑换</string>
     <string name="window_exchange_btn">确定</string>

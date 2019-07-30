@@ -121,6 +121,10 @@
     <string name="profit_record_achievement">分享业绩</string>
     <string name="profit_record_share">分享收益</string>
     <string name="profit_record_coin">理财收益</string>
+    <string name="release_total_quit">静态已释放</string>
+    <string name="release_total_open">分享已释放</string>
+
+
 
     <string name="achievement_record_title">分享业绩</string>
     <string name="achievement_record_total">总业绩（$）</string>
@@ -376,5 +380,6 @@
     <string name="current_pro">当前抢购进度：</string>
     <string name="call_my_twitter">推特</string>
     <string name="window_password_edit_send">请输入短信验证码</string>
-
+    <string name="conversion_profit_title">转化收益</string>
+    <string name="profit_record_conversion">转化收益</string>
 </resources>

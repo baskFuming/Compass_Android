@@ -121,6 +121,8 @@
     <string name="profit_record_achievement">Sharing performance</string>
     <string name="profit_record_share">Share revenue</string>
     <string name="profit_record_coin">Financial Benefits</string>
+    <string name="release_total_quit">Static eleased</string>
+    <string name="release_total_open">Share Released</string>
 
     <string name="achievement_record_title">Sharing performance</string>
     <string name="achievement_record_total">Total performance（CT）</string>
@@ -376,5 +378,7 @@
     <string name="current_pro">Current snapping progress:</string>
     <string name="call_my_twitter">Twitter</string>
     <string name="window_password_edit_send">Please enter SMS verification code</string>
+    <string name="conversion_profit_title">Transformation earnings</string>
+    <string name="profit_record_conversion">Transformation earnings</string>
 
 </resources>
