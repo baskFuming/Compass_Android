@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.xxx.compass.ConfigClass;
+import com.xxx.compass.base.App;
 import com.xxx.compass.model.utils.LocalManageUtil;
 
 import org.greenrobot.eventbus.EventBus;
@@ -27,6 +28,8 @@ public abstract class BaseLanguageActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //上下文
+        App.activity = this;
         //注册多语言切换的EventBus
         EventBus.getDefault().register(this);
     }
@@ -66,6 +69,7 @@ public abstract class BaseLanguageActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        App.activity = null;
         //注销多语言切换EventBus
         EventBus.getDefault().unregister(this);
     }

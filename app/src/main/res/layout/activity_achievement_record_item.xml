@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
@@ -31,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="用户名"
+                    android:text="@string/profit_record_user"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/text_size" />
 
@@ -40,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
-                    android:text="等级"
+                    android:text="@string/profit_record_level"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/text_size" />
 
@@ -49,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:text="团队业绩($)"
+                    android:text="@string/achievement_record_rank"
                     android:textColor="@color/colorText"
                     android:textSize="@dimen/text_size" />
 

@@ -1,6 +1,5 @@
 package com.xxx.compass.ui.my.activity;
 
-import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +18,7 @@ import com.xxx.compass.model.sp.SharedConst;
 import com.xxx.compass.model.sp.SharedPreferencesUtil;
 import com.xxx.compass.model.utils.ToastUtil;
 import com.xxx.compass.ui.my.adapter.AchievementRecordAdapter;
+import com.xxx.compass.ui.my.adapter.AchievementRecordItemAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,9 +46,12 @@ public class AchievementRecordActivity extends BaseTitleActivity implements Swip
     private AchievementRecordAdapter mAdapter;
     private List<AchievementRecordBean.CommunityInfoListBean> mList = new ArrayList<>();
 
+    private AchievementRecordItemAdapter adapter;
+    private List<AchievementRecordBean.CommunityInfoListBean.TeamListBean> dlist = new ArrayList<>();
+
     @Override
     protected String initTitle() {
-        return getString(R.string.achievement_record_title);
+        return getString(R.string.profit_record_achievement);
     }
 
     @Override
@@ -58,27 +61,31 @@ public class AchievementRecordActivity extends BaseTitleActivity implements Swip
 
     @Override
     protected void initData() {
-        mAdapter = new AchievementRecordAdapter(mList, this);
+//        mAdapter = new AchievementRecordAdapter(mList, this);
+        adapter = new AchievementRecordItemAdapter(dlist, this);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
-        mRecycler.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(this);
+        mRecycler.setAdapter(adapter);
+        adapter.setOnItemClickListener(this);
         mRefresh.setOnRefreshListener(this);
 
-        loadData();
+//        loadData();
+        loadDataList();
     }
+
 
     @Override
     public void onRefresh() {
-        loadData();
+//        loadData();
+        loadDataList();
     }
 
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-        Intent intent = new Intent(this, AchievementRecordItemActivity.class);
-        AchievementRecordBean.CommunityInfoListBean bean = mList.get(position);
-        intent.putExtra("data", bean);
-        intent.putExtra("title", bean.getLevel(this));
-        startActivity(intent);
+//        Intent intent = new Intent(this, AchievementRecordItemActivity.class);
+//        AchievementRecordBean.CommunityInfoListBean bean = mList.get(position);
+//        intent.putExtra("data", bean);
+//        intent.putExtra("title", bean.getLevel(this));
+//        startActivity(intent);
     }
 
     /**
@@ -89,7 +96,6 @@ public class AchievementRecordActivity extends BaseTitleActivity implements Swip
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ApiCallback<AchievementRecordBean>(this) {
-
                     @Override
                     public void onSuccess(BaseBean<AchievementRecordBean> bean) {
                         if (bean != null) {
@@ -106,6 +112,61 @@ public class AchievementRecordActivity extends BaseTitleActivity implements Swip
                                 } else {
                                     mNotData.setVisibility(View.VISIBLE);
                                     mRecycler.setVisibility(View.GONE);
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onError(int errorCode, String errorMessage) {
+                        ToastUtil.showToast(errorMessage);
+                    }
+
+                    @Override
+                    public void onStart(Disposable d) {
+                        super.onStart(d);
+                        if (mRefresh != null) {
+                            mRefresh.setRefreshing(true);
+                        }
+                    }
+
+                    @Override
+                    public void onEnd() {
+                        super.onEnd();
+                        if (mRefresh != null) {
+                            mRefresh.setRefreshing(false);
+                        }
+                    }
+                });
+    }
+
+    /**
+     * @Model 获取分享业绩列表
+     */
+    private void loadDataList() {
+        Api.getInstance().getAchievementRecordList(String.valueOf(SharedPreferencesUtil.getInstance().getString(SharedConst.VALUE_USER_ID)))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new ApiCallback<AchievementRecordBean>(this) {
+                    @Override
+                    public void onSuccess(BaseBean<AchievementRecordBean> bean) {
+                        if (bean != null) {
+                            AchievementRecordBean dataBean = bean.getData();
+                            if (dataBean != null) {
+                                mTotal.setText(dataBean.getReferTeamAsset());
+                                List<AchievementRecordBean.CommunityInfoListBean> list = dataBean.getCommunityInfoList();
+                                if (list != null && list.size() != 0) {
+                                    List<AchievementRecordBean.CommunityInfoListBean.TeamListBean> tlist = list.get(0).getTeamList();
+                                    if (tlist != null && tlist.size() != 0) {
+                                        mNotData.setVisibility(View.GONE);
+                                        mRecycler.setVisibility(View.VISIBLE);
+                                        dlist.clear();
+                                        dlist.addAll(tlist);
+                                        adapter.notifyDataSetChanged();
+                                    } else {
+                                        mNotData.setVisibility(View.VISIBLE);
+                                        mRecycler.setVisibility(View.GONE);
+                                    }
                                 }
                             }
                         }

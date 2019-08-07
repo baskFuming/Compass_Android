@@ -48,7 +48,7 @@ public class DepositOutActivity extends BaseTitleActivity implements PasswordWin
 
     @Override
     protected String initTitle() {
-        return getString(R.string.deposit_out_record);
+        return getString(R.string.deposit_out_title);
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.xxx.compass;
 import com.xxx.compass.model.utils.SystemUtil;
 
 public class ConfigClass {
-
     /**
      * 服务器地址
      */

@@ -42,6 +42,6 @@ public class ToastUtil {
     }
 
     public static void showToast(int resId) {
-        showToast(App.getContext().getString(resId));
+        showToast(App.activity.getResources().getString(resId));
     }
 }

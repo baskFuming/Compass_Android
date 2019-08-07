@@ -44,6 +44,7 @@ public class ProfitRecordActivity extends BaseTitleActivity {
                 break;
             case R.id.profit_record_achievement:
                 startActivity(new Intent(this, AchievementRecordActivity.class));
+
                 break;
             case R.id.profit_record_share:
                 startActivity(new Intent(this, ShareRecordActivity.class));

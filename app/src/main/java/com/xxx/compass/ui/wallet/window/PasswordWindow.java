@@ -91,7 +91,6 @@ public class PasswordWindow extends BaseDialog {
     private void sendSMSCode() {
         String phone = SharedPreferencesUtil.getInstance().getString(SharedConst.VALUE_USER_PHONE);
         String phoneName = SharedPreferencesUtil.getInstance().getString(SharedConst.VALUE_COUNTY_CITY);
-
         Api.getInstance().sendWithdrawal(phone, phoneName)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

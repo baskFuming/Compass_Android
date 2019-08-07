@@ -1,6 +1,7 @@
 package com.xxx.compass.base;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,8 @@ public class App extends Application {
 
     @SuppressLint("StaticFieldLeak")
     private static Context context;
+    //上下文
+    public static Activity activity;
 
     @Override
     protected void attachBaseContext(Context base) {

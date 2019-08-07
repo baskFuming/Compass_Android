@@ -118,7 +118,7 @@
     <string name="profit_record_title">收益记录</string>
     <string name="profit_record_release">释放记录</string>
     <string name="profit_record_rush">抢购记录</string>
-    <string name="profit_record_achievement">分享业绩</string>
+    <string name="profit_record_achievement">社区业绩</string>
     <string name="profit_record_share">分享收益</string>
     <string name="profit_record_coin">理财收益</string>
     <string name="release_total_quit">静态已释放</string>
@@ -382,4 +382,7 @@
     <string name="window_password_edit_send">请输入短信验证码</string>
     <string name="conversion_profit_title">转化收益</string>
     <string name="profit_record_conversion">转化收益</string>
+
+    <string name="profit_record_user">用户名</string>
+    <string name="profit_record_level">等级</string>
 </resources>

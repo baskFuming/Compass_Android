@@ -118,7 +118,7 @@
     <string name="profit_record_title">Revenue record</string>
     <string name="profit_record_release">Release record</string>
     <string name="profit_record_rush">Purchase record</string>
-    <string name="profit_record_achievement">Sharing performance</string>
+    <string name="profit_record_achievement">Community performance</string>
     <string name="profit_record_share">Share revenue</string>
     <string name="profit_record_coin">Financial Benefits</string>
     <string name="release_total_quit">Static eleased</string>
@@ -336,8 +336,8 @@
     <string name="update_title">Discover the new version</string>
     <string name="update_btn">To download</string>
 
-    <string name="item_achievement_record_amount_1">Ordinary node</string>
-    <string name="item_achievement_record_amount_2"> drill joint</string>
+    <string name="item_achievement_record_amount_1">Ordinary ode</string>
+    <string name="item_achievement_record_amount_2"> Drill joint</string>
 
     <string name="release_total_balance">Remaining released</string>
     <string name="release_total_out">Total released</string>
@@ -380,5 +380,8 @@
     <string name="window_password_edit_send">Please enter SMS verification code</string>
     <string name="conversion_profit_title">Transformation earnings</string>
     <string name="profit_record_conversion">Transformation earnings</string>
+
+    <string name="profit_record_user">User</string>
+    <string name="profit_record_level">Level</string>
 
 </resources>

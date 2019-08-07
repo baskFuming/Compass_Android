@@ -119,7 +119,7 @@
     <string name="profit_record_title">收益记录</string>
     <string name="profit_record_release">释放记录</string>
     <string name="profit_record_rush">抢购记录</string>
-    <string name="profit_record_achievement">分享业绩</string>
+    <string name="profit_record_achievement">社区业绩</string>
     <string name="profit_record_share">分享收益</string>
     <string name="profit_record_coin">理财收益</string>
 
@@ -383,5 +383,9 @@
 
     <string name="current_pro">当前抢购进度：</string>
     <string name="call_my_twitter">推特</string>
+
+
+    <string name="profit_record_user">用户名</string>
+    <string name="profit_record_level">等级</string>
 
 </resources>
