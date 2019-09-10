@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.xxx.compass.ConfigClass;
 import com.xxx.compass.R;
@@ -134,6 +135,7 @@ public class ShareRecordActivity extends BaseTitleActivity implements SwipeRefre
                     @Override
                     public void onError(int errorCode, String errorMessage) {
                         ToastUtil.showToast(errorMessage);
+
                     }
 
                     @Override

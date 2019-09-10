@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.xxx.compass.ConfigClass;
 import com.xxx.compass.R;
 import com.xxx.compass.base.activity.ActivityManager;
@@ -126,7 +127,6 @@ public class LoginActivity extends BaseActivity {
                             LoginBean data = bean.getData();
                             if (data != null) {
                                 ToastUtil.showToast(bean.getMessage());
-
                                 SharedPreferencesUtil util = SharedPreferencesUtil.getInstance();
                                 util.saveString(SharedConst.VALUE_USER_PHONE, account);
                                 util.saveString(SharedConst.VALUE_USER_NAME, data.getUsername());

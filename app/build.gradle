@@ -14,22 +14,24 @@ android {
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 8
-//        versionName "2.1.0" //当前版本2.0.0  / 7      / 7.8
+//        versionCode 11
+//        versionName "2.2.0" //当前版本 2.1.0  9  7/30   8/2   2.1.1  10      8.7   10  2.1.1
         versionName "1.0.0" //test
+//        versionName "2.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
         config {
-//            storeFile file('F:/project/compass_android/compass.jks')   /Users/mac/Desktop/compass.jks
-//            storePassword '123456'
-//            keyAlias 'android'
+            storeFile file('/Users/mac/Desktop/compass_android/compass.jks')
+            storePassword '123456'
+            keyAlias 'android'
 //            keyPasswordsword '123456'
         }
         testConfig {
-//            storeFile file('F:/project/compass_android/compass_test.jks')
-//            storePassword '123456'
-//            keyAlias 'android_test'
+            storeFile file('/Users/mac/Desktop/compass_android/compass_test.jks')
+            storePassword '123456'
+            keyAlias 'android_test'
 //            keyAliaseyPassword '123456'
         }
     }
@@ -83,8 +85,6 @@ dependencies {
     //Butter knife查找ID
     implementation 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    //数据库
-//    implementation 'org.greenrobot:greendao:3.2.2'
     //沉浸式
     implementation 'com.gyf.barlibrary:barlibrary:2.2.9'
     //屏幕适配
@@ -101,7 +101,8 @@ dependencies {
     //轮播图
     implementation 'com.youth.banner:banner:1.4.9'
 //    implementation project(':zxing')
-
     implementation 'com.google.zxing:core:3.3.0'
     implementation('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
+    //工具大全
+    implementation 'com.blankj:utilcode:1.22.1'
 }

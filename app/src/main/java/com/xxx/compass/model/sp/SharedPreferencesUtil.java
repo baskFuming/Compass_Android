@@ -3,6 +3,7 @@ package com.xxx.compass.model.sp;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.blankj.utilcode.util.SPUtils;
 import com.xxx.compass.base.App;
 import com.xxx.compass.ConfigClass;
 

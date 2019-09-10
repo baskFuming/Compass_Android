@@ -3,7 +3,9 @@ package com.xxx.compass.ui.my.activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.xxx.compass.ConfigClass;
 import com.xxx.compass.R;
 import com.xxx.compass.base.activity.BaseTitleActivity;
@@ -99,7 +101,6 @@ public class AccountSettingActivity extends BaseTitleActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new ApiCallback<AppVersionBean>(this) {
-
                     @Override
                     public void onSuccess(BaseBean<AppVersionBean> bean) {
                         if (bean != null) {

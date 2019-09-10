@@ -30,7 +30,6 @@ public class ActivityManager {
         return instance;
     }
 
-
     /**
      * 添加Activity到堆栈
      */

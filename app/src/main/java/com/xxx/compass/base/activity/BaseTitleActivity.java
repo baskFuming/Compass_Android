@@ -6,6 +6,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.xxx.compass.R;
+import com.xxx.compass.base.App;
 
 /**
  * 需要Title展示的Activity
@@ -33,4 +34,5 @@ public abstract class BaseTitleActivity extends BaseActivity {
             e.printStackTrace();
         }
     }
+
 }

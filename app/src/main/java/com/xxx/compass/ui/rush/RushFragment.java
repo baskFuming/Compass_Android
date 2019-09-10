@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.xxx.compass.R;
 import com.xxx.compass.base.fragment.BaseFragment;
 import com.xxx.compass.base.dialog.LoadingDialog;

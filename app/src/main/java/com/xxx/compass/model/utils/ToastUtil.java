@@ -1,7 +1,11 @@
 package com.xxx.compass.model.utils;
 
+import android.app.Application;
+import android.content.Context;
+import android.text.style.TtsSpan;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.Utils;
 import com.xxx.compass.base.App;
 
 /**
@@ -13,17 +17,11 @@ public class ToastUtil {
     private static String oldMsg;
     private static long oneTime = 0;
     private static long twoTime = 0;
-
     public static void showToast(String s) {
         if (s == null || s.equals("")) return;
 
         if (toast == null) {
             toast = Toast.makeText(App.getContext(), s, Toast.LENGTH_SHORT);
-//            int tvToastId = Resources.getSystem().getIdentifier("message", "id", "android");
-//            TextView tvToast = toast.getView().findViewById(tvToastId);
-//            if (tvToast != null) {
-//                tvToast.setGravity(Gravity.CENTER);
-//            }
             toast.show();
             oneTime = System.currentTimeMillis();
         } else {
@@ -42,6 +40,6 @@ public class ToastUtil {
     }
 
     public static void showToast(int resId) {
-        showToast(App.activity.getResources().getString(resId));
+        showToast(App.getApplication().getResources().getString(resId));
     }
 }

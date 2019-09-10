@@ -15,7 +15,6 @@ public abstract class BaseActivity extends BaseLanguageActivity {
     private ImmersionBar mImmersionBar;
     private boolean isShowData;  //用于绑定Activity与网络请求的生命周期是否可以加载数据
     private Unbinder unbinder;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
