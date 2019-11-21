@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import org.greenrobot.eventbus.EventBus;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -41,5 +43,6 @@ public abstract class BaseFragment extends Fragment {
 
     //初始化数据
     protected abstract void initData();
+
 
 }
